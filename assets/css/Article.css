@@ -1,0 +1,38 @@
+.article-section {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+@media (min-width: 300px) {
+  .img-div {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+}
+
+.article-navigation-link {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  font-size: 25px;
+}
+
+.article-loop-item {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.audio-player-reegion {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+

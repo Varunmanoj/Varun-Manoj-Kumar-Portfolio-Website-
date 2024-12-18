@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html data-bs-theme="auto" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Battery % Viewer Low Vision |Varun Manoj Kumar</title>
+    <meta property="og:image" content="https://varunmanojkumar.in/assets/img/Battery Viewer - Low Vision.png">
+    <meta name="twitter:title" content="Battery % Viewer Low Vision">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="description" content="People with visual impairments (Visually Impaired (VI) Community) usually find it difficult to read the battery level on their Phones/ Tablets/Computers. Battery % is one of the most important displays on their devices as it allows people to plan the usage of their devices accordingly. However, there are not many options that are suitable for people with visual impairments when it comes to viewing the Devices’ Battery Level. Currently people with visual impairments rely on the Phone/Computers low battery system notification (Usually when the Device reaches 15% or 10%) and by then it is often too late to act.">
+    <meta property="og:type" content="article">
+    <meta name="twitter:image" content="https://varunmanojkumar.in/assets/img/Battery Viewer - Low Vision.png">
+    <meta name="twitter:description" content="People with visual impairments (Visually Impaired (VI) Community) usually find it difficult to read the battery level on their Phones/ Tablets/Computers. Battery % is one of the most important displays on their devices as it allows people to plan the usage of their devices accordingly. However, there are not many options that are suitable for people with visual impairments when it comes to viewing the Devices’ Battery Level. Currently people with visual impairments rely on the Phone/Computers low battery system notification (Usually when the Device reaches 15% or 10%) and by then it is often too late to act.">
+    <script>
+        (function() {
+
+            // JavaScript snippet handling Dark/Light mode switching
+
+            const getStoredTheme = () => localStorage.getItem('theme');
+            const setStoredTheme = theme => localStorage.setItem('theme', theme);
+            const forcedTheme = document.documentElement.getAttribute('data-bss-forced-theme');
+
+            const getPreferredTheme = () => {
+
+                if (forcedTheme) return forcedTheme;
+
+                const storedTheme = getStoredTheme();
+                if (storedTheme) {
+                    return storedTheme;
+                }
+
+                const pageTheme = document.documentElement.getAttribute('data-bs-theme');
+
+                if (pageTheme) {
+                    return pageTheme;
+                }
+
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+
+            const setTheme = theme => {
+                if (theme === 'auto' && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    document.documentElement.setAttribute('data-bs-theme', 'dark');
+                } else {
+                    document.documentElement.setAttribute('data-bs-theme', theme);
+                }
+            }
+
+            setTheme(getPreferredTheme());
+
+            const showActiveTheme = (theme, focus = false) => {
+                const themeSwitchers = [].slice.call(document.querySelectorAll('.theme-switcher'));
+
+                if (!themeSwitchers.length) return;
+
+                document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+                    element.classList.remove('active');
+                    element.setAttribute('aria-pressed', 'false');
+                });
+
+                for (const themeSwitcher of themeSwitchers) {
+
+                    const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
+
+                    if (btnToActivate) {
+                        btnToActivate.classList.add('active');
+                        btnToActivate.setAttribute('aria-pressed', 'true');
+                    }
+                }
+            }
+
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+                const storedTheme = getStoredTheme();
+                if (storedTheme !== 'light' && storedTheme !== 'dark') {
+                    setTheme(getPreferredTheme());
+                }
+            });
+
+            window.addEventListener('DOMContentLoaded', () => {
+                showActiveTheme(getPreferredTheme());
+
+                document.querySelectorAll('[data-bs-theme-value]')
+                    .forEach(toggle => {
+                        toggle.addEventListener('click', (e) => {
+                            e.preventDefault();
+                            const theme = toggle.getAttribute('data-bs-theme-value');
+                            setStoredTheme(theme);
+                            setTheme(theme);
+                            showActiveTheme(theme);
+                        })
+                    })
+            });
+        })();
+    </script>
+    <link rel="icon" type="image/webp" sizes="442x442" href="../assets/img/Varun%20Profesional%20photo.webp?h=119d5483f6f8f209131d162c087edd50">
+    <link rel="icon" type="image/webp" sizes="442x442" href="../assets/img/Varun%20Profesional%20photo.webp?h=119d5483f6f8f209131d162c087edd50">
+    <link rel="icon" type="image/webp" sizes="442x442" href="../assets/img/Varun%20Profesional%20photo.webp?h=119d5483f6f8f209131d162c087edd50">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/css/able.css?h=2512c4f61add0cf732121640311e6656">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,500,600,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,600,700&amp;display=swap">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="../assets/css/bs-theme-overrides.css?h=ff359f63f065a29620caa5adcebe1f46">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="../assets/css/Article.css?h=3e21e2a9cf1bd8cd7fad3e998822a1fb">
+    <link rel="stylesheet" href="../assets/css/Lightbox-Gallery-baguetteBox.min.css?h=780d0848ecb3f5a655ea7ce62ebc466f">
+    <link rel="stylesheet" href="../assets/css/Navbar-Centered-Brand-icons.css?h=cb99de9354df65b2ca9e865e7317af56">
+    <link rel="stylesheet" href="../assets/css/styles.css?h=30c0ba1db1120bd1c16895254d1ab9aa">
+    <link rel="stylesheet" href="../assets/css/Able%20Player/build/ableplayer.min.css?h=01d884ef597e7cc1be7e54d214a42219">
+    <link rel="stylesheet" href="../assets/css/Able%20Player/style/ableplayer.css?h=db8c12b9d4503b9063fd75dfa93d352a">
+    <link rel="stylesheet" href="../assets/css/Project.css?h=f3ae4786535f3296255a98e8fab97ed4">
+</head>
+
+<body>
+    <header>
+        <!-- Start: Navbar Centered Brand -->
+        <nav class="navbar navbar-expand-md bg-body py-3">
+            <div class="container"><a class="navbar-brand d-flex align-items-center" href="index.html">Varun Manoj Kumar</a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-4"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse flex-grow-0 order-md-first" id="navcol-4">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item"><a class="nav-link focus-ring" href="Project.html">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link active focus-ring" href="Articles.html">Articles</a></li>
+                    </ul>
+                </div><!-- Start: Div Laptop -->
+                <div class="d-none d-md-block">
+                    <div class="theme-switcher dropdown"><a class="dropdown-toggle focus-ring" aria-expanded="false" data-bs-toggle="dropdown" href="#" aria-label="Theme switcher"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
+                                <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                            </svg></a>
+                        <div class="dropdown-menu"><a class="dropdown-item focus-ring d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill opacity-50 me-2">
+                                    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                                </svg>Light</a><a class="dropdown-item focus-ring d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill opacity-50 me-2">
+                                    <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"></path>
+                                    <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
+                                </svg>Dark</a><a class="dropdown-item focus-ring d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half opacity-50 me-2">
+                                    <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
+                                </svg>Auto</a></div>
+                    </div>
+                </div><!-- End: Div Laptop -->
+            </div>
+        </nav><!-- End: Navbar Centered Brand -->
+    </header>
+    <main class="main-section">
+        <article data-aos="fade" data-aos-duration="1500" class="article-section">
+            <!-- Start: Back Navigation -->
+            <div class="container section"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-left button-icon" style="font-size: 28px;">
+                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"></path>
+                </svg><a class="focus-ring" data-bs-toggle="tooltip" data-bss-tooltip="" href="../Project.html" title="All Projects">Back</a></div><!-- End: Back Navigation -->
+            <!-- Start: Project -->
+            <div class="container">
+                <!-- Start: Description -->
+                <section class="d-flex flex-column align-items-center"><img class="img-fluid" alt="St. xavier's College Canteen Menu" width="528" height="258" src="../assets/img/Battery%20Viewer%20-%20Low%20Vision.png?h=f605f57bc6403f7ac78d93ac77233a7d">
+                    <h1 class="text-center section-title">Battery % Viewer Low Vision |Varun Manoj Kumar</h1>
+                    <p>People with visual impairments (Visually Impaired (VI) Community) usually find it difficult to read the battery level on their Phones/ Tablets/Computers. Battery % is one of the most important displays on their devices as it allows people to plan the usage of their devices accordingly. However, there are not many options that are suitable for people with visual impairments when it comes to viewing the Devices’ Battery Level. Currently people with visual impairments rely on the Phone/Computers low battery system notification (Usually when the Device reaches 15% or 10%) and by then it is often too late to act.<br><br>This app aims to show the battery percentage in large font and also announce the same using the device’s speaker.</p>
+                </section><!-- End: Description -->
+                <section class="section">
+                    <h2 class="text-center section-title">Project Links</h2>
+                    <h3 class="text-center section-title">Mobile</h3>
+                    <div class="row row-cols-sm-2 row-cols-md-4">
+                        <div class="col">
+                            <div><a class="focus-ring d-flex flex-row" href="https://batteryviewer.varunmanojkumar.in/home" target="_blank" rel="external"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-link-45deg fs-2 text-success button-icon">
+                                        <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"></path>
+                                        <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"></path>
+                                    </svg>
+                                    <p class="fs-3">Project Link</p>
+                                </a></div>
+                        </div>
+                        <div class="col">
+                            <div><a class="focus-ring d-flex flex-row" href="https://github.com/Varunmanoj/Battery-Level--Android-App" target="_blank" rel="external"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-github fs-2 text-success button-icon">
+                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"></path>
+                                    </svg>
+                                    <p class="fs-5">Android GitHub</p>
+                                </a></div>
+                        </div>
+                        <div class="col">
+                            <div><a class="focus-ring d-flex flex-row" href="https://play.google.com/store/apps/details?id=com.varunmanojkumar.batterylevel" target="_blank" rel="external"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-google-play fs-2 text-success button-icon">
+                                        <path d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96 2.694-1.586Zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055l7.294-4.295M1 13.396V2.603L6.846 8zM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27Z"></path>
+                                    </svg>
+                                    <p class="fs-5">Google Play</p>
+                                </a></div>
+                        </div>
+                        <div class="col">
+                            <div><a class="focus-ring d-flex flex-row" href="https://www.amazon.in/Varun-Manoj-kumar-Battery-Viewer/dp/B09SCJ84Z6/ref=sr_1_1?crid=2AC2QGA09UCRP&amp;keywords=battery+%25+viewer&amp;qid=1666343079&amp;s=mobile-apps&amp;sprefix=battery+%25+viewer%2Cmobile-apps%2C231&amp;sr=1-1" target="_blank" rel="external"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-amazon fs-2 text-success button-icon" style="font-size: 54px;">
+                                        <path d="M10.813 11.968c.157.083.36.074.5-.05l.005.005a89.521 89.521 0 0 1 1.623-1.405c.173-.143.143-.372.006-.563l-.125-.17c-.345-.465-.673-.906-.673-1.791v-3.3l.001-.335c.008-1.265.014-2.421-.933-3.305C10.404.274 9.06 0 8.03 0 6.017 0 3.77.75 3.296 3.24c-.047.264.143.404.316.443l2.054.22c.19-.009.33-.196.366-.387.176-.857.896-1.271 1.703-1.271.435 0 .929.16 1.188.55.264.39.26.91.257 1.376v.432c-.199.022-.407.044-.621.065-1.113.114-2.397.246-3.36.67C3.873 5.91 2.94 7.08 2.94 8.798c0 2.2 1.387 3.298 3.168 3.298 1.506 0 2.328-.354 3.489-1.54l.167.246c.274.405.456.675 1.047 1.166ZM6.03 8.431C6.03 6.627 7.647 6.3 9.177 6.3v.57c.001.776.002 1.434-.396 2.133-.336.595-.87.961-1.465.961-.812 0-1.286-.619-1.286-1.533ZM.435 12.174c2.629 1.603 6.698 4.084 13.183.997.28-.116.475.078.199.431C13.538 13.96 11.312 16 7.57 16 3.832 16 .968 13.446.094 12.386c-.24-.275.036-.4.199-.299l.142.087Z"></path>
+                                        <path d="M13.828 11.943c.567-.07 1.468-.027 1.645.204.135.176-.004.966-.233 1.533-.23.563-.572.961-.762 1.115-.191.154-.333.094-.23-.137.105-.23.684-1.663.455-1.963-.213-.278-1.177-.177-1.625-.13l-.09.009c-.095.008-.172.017-.233.024-.193.021-.245.027-.274-.032-.074-.209.779-.556 1.347-.623Z"></path>
+                                    </svg>
+                                    <p class="fs-5">Amazon App Store</p>
+                                </a></div>
+                        </div>
+                    </div>
+                    <h2 class="text-center section-title">Desktop</h2>
+                    <div class="row row-cols-sm-2 row-cols-md-4">
+                        <div class="col">
+                            <div><a class="focus-ring d-flex flex-row" href="https://sites.google.com/view/batteryviewer-low-vision/windows-app?authuser=0" target="_blank" rel="external"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-link-45deg fs-2 text-success button-icon">
+                                        <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"></path>
+                                        <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"></path>
+                                    </svg>
+                                    <p class="fs-3">Project Link</p>
+                                </a></div>
+                        </div>
+                        <div class="col">
+                            <div><a class="focus-ring d-flex flex-row" href="https://github.com/Varunmanoj/Battery-Viewer-Desktop" target="_blank" rel="external"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-github fs-2 text-success button-icon">
+                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"></path>
+                                    </svg>
+                                    <p class="fs-5">Desktop GitHub</p>
+                                </a></div>
+                        </div>
+                        <div class="col">
+                            <div><a class="focus-ring d-flex flex-row" href="https://github.com/Varunmanoj/Battery-Viewer-Desktop/releases/download/V10/Battery.Viewer.V9.Installer.msi" rel="external"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-windows fs-2 text-success button-icon">
+                                        <path d="M6.555 1.375 0 2.237v5.45h6.555zM0 13.795l6.555.933V8.313H0v5.482zm7.278-5.4.026 6.378L16 16V8.395H7.278zM16 0 7.33 1.244v6.414H16z"></path>
+                                    </svg>
+                                    <p class="fs-5">Windows</p>
+                                </a></div>
+                        </div>
+                        <div class="col">
+                            <div><a class="focus-ring d-flex flex-row" href="https://github.com/Varunmanoj/Battery-Viewer-Desktop/releases/download/V9/Battery.Viewer.Installer.dmg"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-apple fs-2 text-success button-icon" style="font-size: 54px;">
+                                        <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"></path>
+                                        <path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"></path>
+                                    </svg>
+                                    <p class="fs-5">Mac&nbsp; (Apple Silicon</p>
+                                </a></div>
+                        </div>
+                    </div>
+                </section>
+            </div><!-- End: Project -->
+            <!-- Start: Article Navigation -->
+            <div class="container">
+                <div class="text-end">
+                    <div class="flex-row align-content-end"><a class="article-navigation-link" href="Malhar-Website-Accessibility.html">Next Project</a><i class="fas fa-arrow-circle-right button-icon" style="font-size: 30px;"></i></div>
+                    <p>St. Xavier's College Canteen</p>
+                </div><!-- Start: All Projects -->
+                <div class="text-center section"><a class="btn btn-primary" role="button" id="all-projects" href="../Project.html"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-briefcase button-icon" style="font-size: 29px;">
+                            <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5"></path>
+                        </svg>View All Projects</a></div><!-- End: All Projects -->
+            </div><!-- End: Article Navigation -->
+        </article>
+    </main><!-- Start: Footer Dark -->
+    <footer class="text-center bg-dark">
+        <div class="container text-white py-4 py-lg-5">
+            <p class="text-muted mb-0">Copyright © 2024 | Varun Manoj Kumar</p>
+        </div>
+    </footer><!-- End: Footer Dark -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../assets/js/bs-init.js?h=48cb7c9660bd18942e7bff14a9994e8e"></script>
+    <script src="../assets/js/Able%20Player/script/vts.js?h=1d03205b81034d35642afb002147238d"></script>
+    <script src="../assets/js/Able%20Player/script/webvtt.js?h=b7801d3f2beaadd22ce21aa6af98d293"></script>
+    <script src="../assets/js/Able%20Player/script/youtube.js?h=3a2cae9e4cdb1a68747758bb6ab5fed3"></script>
+    <script src="../assets/js/Able%20Player/script/misc.js?h=8a5992ce79cc823270245af4135eedc5"></script>
+    <script src="../assets/js/Able%20Player/script/preference.js?h=74f58706f5a0b14652f8c1264355e559"></script>
+    <script src="../assets/js/Able%20Player/script/search.js?h=509fa3b4ff490920ef9871389eed5c9f"></script>
+    <script src="../assets/js/Able%20Player/script/sign.js?h=c4c384a4cb7f79105dcc5c4580f5f9a7"></script>
+    <script src="../assets/js/Able%20Player/script/slider.js?h=3598ec1b3ee7b5ad42ae029beb46e4ea"></script>
+    <script src="../assets/js/Able%20Player/script/track.js?h=c21ce402aaf14ccf3bcbf9fb17407899"></script>
+    <script src="../assets/js/Able%20Player/script/transcript.js?h=44d2d2f0e1ed60d8c44c6e9d36b84db0"></script>
+    <script src="../assets/js/Able%20Player/script/translation.js?h=b31ed39427bcedd7bc51b73d42ddaad6"></script>
+    <script src="../assets/js/Able%20Player/translations/ja.js?h=0c3de98dd44bff97019d4776f1937ed2"></script>
+    <script src="../assets/js/Able%20Player/script/ttml2webvtt.js?h=a7419cc294abaaeea72bb025846502b0"></script>
+    <script src="../assets/js/Able%20Player/translations/nb.js?h=a6d6eca7c7db879c564c29623f1ac1b5"></script>
+    <script src="../assets/js/Able%20Player/script/vimeo.js?h=26a89bf1722b2e64ca5c4f0efd5a1ea6"></script>
+    <script src="../assets/js/Able%20Player/translations/nl.js?h=5e4728519186594bf5731b8880b37943"></script>
+    <script src="../assets/js/Able%20Player/script/volume.js?h=7af14830768f6b8055d7403394d91bc9"></script>
+    <script src="../assets/js/Able%20Player/translations/pt.js?h=152f00646b5a53dcb53828a7dab9de81"></script>
+    <script src="../assets/js/Able%20Player/script/chapters.js?h=e2df8785e7fb414ac648c8d11f0d1e02"></script>
+    <script src="../assets/js/Able%20Player/translations/pt-br.js?h=1d0e25a57a0ad7d9d76c8e497196a385"></script>
+    <script src="../assets/js/Able%20Player/script/control.js?h=0c76b88b4c4a6bbc7895851afa1fba78"></script>
+    <script src="../assets/js/Able%20Player/translations/sv.js?h=1fd720237a1e06df651738f873a66ce2"></script>
+    <script src="../assets/js/Able%20Player/script/description.js?h=0d2392c000cb70450111cb2c540283d6"></script>
+    <script src="../assets/js/Able%20Player/translations/tr.js?h=fc5d26c940e0334e2bebfea3e6cd1e99"></script>
+    <script src="../assets/js/Able%20Player/script/dialog.js?h=df70f98228d9a786a0c1d7960ac7f98a"></script>
+    <script src="../assets/js/Able%20Player/translations/zh-tw.js?h=8f83280e8da6ff9b619cf890b0a9535b"></script>
+    <script src="../assets/js/Able%20Player/script/dragdrop.js?h=41806759dc96e2374eb521cee7222915"></script>
+    <script src="../assets/js/Able%20Player/translations/ca.js?h=7ed756e6b4442b93f6f25568251fb297"></script>
+    <script src="../assets/js/Able%20Player/script/event.js?h=cbebd8eb490eb37f14c31fdcc44b5ad6"></script>
+    <script src="../assets/js/Able%20Player/translations/cs.js?h=69f1831b40ebb00854f4bb12f7e83998"></script>
+    <script src="../assets/js/Able%20Player/script/initialize.js?h=6f75432c938f3b4b447f4f759b416718"></script>
+    <script src="../assets/js/Able%20Player/translations/da.js?h=faab62536d08f495d754e2c51ec62d49"></script>
+    <script src="../assets/js/Able%20Player/script/langs.js?h=821e48392455859a8bcd3a446cdfe021"></script>
+    <script src="../assets/js/Able%20Player/translations/de.js?h=a2623f0b97a0ad75502180fdbcfafebc"></script>
+    <script src="../assets/js/Able%20Player/script/metadata.js?h=5af7b76ac5b3d205e69311bce4c9e57b"></script>
+    <script src="../assets/js/Able%20Player/translations/en.js?h=4009f06a0080ede4f5982d47c12b4111"></script>
+    <script src="../assets/js/Able%20Player/script/ableplayer-base.js?h=3e267e526930c9c2695ee36f8b630b2b"></script>
+    <script src="../assets/js/Able%20Player/translations/es.js?h=87055944f8266537ece4cd3e15eeb871"></script>
+    <script src="../assets/js/Able%20Player/script/browser.js?h=5fbb3100352b961e69a7b93b551dd331"></script>
+    <script src="../assets/js/Able%20Player/translations/fr.js?h=a877dbfe4d38a0adec027c8d15da13f7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+    <script src="../assets/js/Able%20Player/build/ableplayer.dist.js?h=711e4034b9fc2350512fc857ea79adba"></script>
+    <script src="../assets/js/Able%20Player/script/buildplayer.js?h=a304348fa5007d41c8da06d61c464b85"></script>
+    <script src="../assets/js/Able%20Player/translations/he.js?h=efbe478e251a1ed30ef1c9c92d4e0e81"></script>
+    <script src="../assets/js/Able%20Player/build/ableplayer.js?h=51fd408d5fbd6f4ab456a0cfabb3f42d"></script>
+    <script src="../assets/js/Able%20Player/script/caption.js?h=f34c1bf9d7504bbf54a97fdcbbf1111c"></script>
+    <script src="../assets/js/Able%20Player/translations/id.js?h=ddc260aa6f3d906d81b3f47bd7fa4cda"></script>
+    <script src="../assets/js/Lightbox-Gallery-baguetteBox.min.js?h=add865daffd8b6e10264279f48d8ac50"></script>
+    <script src="../assets/js/Able%20Player/build/ableplayer.min.js?h=ca8b6fd7c1c6854c15142da9ee7deff5"></script>
+    <script src="../assets/js/Able%20Player/script/JQuery.doWhen.js?h=c547b50c791eabcc2c70c52c673ed396"></script>
+    <script src="../assets/js/Able%20Player/translations/it.js?h=40df0e34de62a42c402d5252e7a33d97"></script>
+    <script src="../assets/js/Lightbox-Gallery.js?h=64eb55ccbc6ead5e91ebe308caacba6e"></script>
+    <script src="../assets/js/load-able-player.js?h=9bdd74b46cd266d487c6c474033ac6d2"></script>
+</body>
+
+</html>

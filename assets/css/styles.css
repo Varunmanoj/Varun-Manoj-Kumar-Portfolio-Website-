@@ -1,0 +1,207 @@
+@media (min-width: 576px) {
+  #hero-paragraph {
+    padding-right: 0px;
+    color: var(--bs-dark);
+  }
+}
+
+.project-card {
+  text-align: center;
+  background: var(--bs-primary-bg-subtle);
+  border-radius: 5%;
+  padding: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  min-height: auto;
+}
+
+.section-title {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#education-hilight {
+  padding-top: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  background: var(--bs-primary);
+  border-radius: 5px;
+  padding-left: 31px;
+  font-style: italic;
+}
+
+.education-section {
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.education-hilight {
+  padding-top: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  background: var(--bs-primary);
+  border-radius: 1ppx;
+}
+
+.rowgap {
+}
+
+.education-item-dark {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  background: var(--bs-dark);
+  border-radius: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.education-item {
+  margin-top: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+  background: var(--bs-primary-bg-subtle);
+  border-radius: 1rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+.degreecode {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#Hearo-heading {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--bs-success);
+}
+
+@media (min-width: 300px) {
+  .main-section {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-section {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+}
+
+.project-card-title {
+  padding-top: 5px;
+  color: var(--bs-pink);
+  padding-bottom: 5px;
+}
+
+.section {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.section-dark {
+  background: var(--bs-dark);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.section-title-dark {
+  color: var(--bs-light);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.section-para-dark {
+}
+
+.section-para-dark {
+  color: var(--bs-light);
+}
+
+.experience-lhs-dark {
+  min-width: 35vw;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+.section-title-dark.company-title {
+  color: var(--bs-secondary);
+}
+
+.fas.fa-certificate.button-icon {
+  padding-right: 5px;
+  font-size: 23px;
+}
+
+.certificate-btn {
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+}
+
+.experience-section {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.image-grid {
+  min-width: 203px;
+}
+
+.image-caption {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.button-icon {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.learn-more-cotainer {
+}
+
+.learn-more-container {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.contact-heading {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--bs-secondary);
+}
+
