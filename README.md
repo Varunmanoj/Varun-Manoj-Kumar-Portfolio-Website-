@@ -9,6 +9,7 @@ This portfolio website showcases my experiences at Deloitte Consulting, along wi
 -	**Custom Domain**: Hosted on a personalized domain varunmanojkumar.in for a professional touch.
 -	**Cloudflare R2 Storage:** Used for hosting and delivering website files.
 -	**Analytics Integration**: Tracks site performance in the real world using Google Analytics and Cloudflare Analytics.
+-	**Able Player** : Used a Fully Accessible HTML5 Media Player for  providing audio versions of the articles published on the site. 
 ## Technologies Used
 -	**Bootstrap Studio**: For GUI-based web design.
 -	**HTML & CSS**: Core structure and styling.
@@ -16,7 +17,7 @@ This portfolio website showcases my experiences at Deloitte Consulting, along wi
 -	**Cloudflare Pages**: Deployment and custom domain management.
 -	**Cloudflare R2 Storage**: For storing large project files
 -	**Google Analytics and Cloudflare Analytics**: For monitoring site performance and user interactions.
-
+-	**Able Player** : Used a Fully Accessible HTML5 Media Player for  providing audio versions of the articles published on the site. 
 ## Website Showcase
 -	**Experiences**: Detailed descriptions of my roles and responsibilities at Deloitte Consulting and various Internships.
 	**Projects**: Overview of key projects from my Bachelor's and Master's degrees, along with relevant links to the projects.
