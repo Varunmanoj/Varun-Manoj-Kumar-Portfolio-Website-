@@ -205,3 +205,9 @@ a:hover {
   text-decoration-color: var(--bs-secondary);
 }
 
+.logo-font {
+  font-family: 'Sansita Swashed', serif;
+  font-style: italic;
+  font-weight: bold;
+}
+

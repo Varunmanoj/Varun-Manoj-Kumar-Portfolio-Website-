@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'able';
-	src: url(../../assets/fonts/able-177e455215eb3f759a829956907bc5e3.eot?h=2512c4f61add0cf732121640311e6656&dqripi=) format('embedded-opentype'),
-	url(../../assets/fonts/able-177e455215eb3f759a829956907bc5e3.eot?h=2512c4f61add0cf732121640311e6656&dqripi=) format('embedded-opentype'),
-	url(../../assets/fonts/able-59ae99f32abada4fb5e9c78431229709.ttf?h=2512c4f61add0cf732121640311e6656&dqripi=) format('truetype'),
-	url(../../assets/fonts/able-870ef526e56ae1964abf81947afc5316.woff?h=2512c4f61add0cf732121640311e6656&dqripi=) format('woff'),
-	url(../../assets/fonts/able-0b5501c4e8089c8e398f25f4f646cc86.svg?h=2512c4f61add0cf732121640311e6656&dqripi=) format('svg');
+	src: url(../../assets/fonts/able-177e455215eb3f759a829956907bc5e3.eot?dqripi=) format('embedded-opentype'),
+	url(../../assets/fonts/able-177e455215eb3f759a829956907bc5e3.eot?dqripi=) format('embedded-opentype'),
+	url(../../assets/fonts/able-59ae99f32abada4fb5e9c78431229709.ttf?dqripi=) format('truetype'),
+	url(../../assets/fonts/able-870ef526e56ae1964abf81947afc5316.woff?dqripi=) format('woff'),
+	url(../../assets/fonts/able-0b5501c4e8089c8e398f25f4f646cc86.svg?dqripi=) format('svg');
 	font-weight: 400;
 	font-style: normal;
 	font-display: auto;
