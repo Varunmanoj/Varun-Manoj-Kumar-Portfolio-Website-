@@ -1,6 +1,11 @@
 # Varun Manoj Kumar Portfolio Website
 ## Introduction
-This portfolio website showcases my experiences at Deloitte Consulting, along with projects developed during my bachelor’s and master’s degrees. It is a static HTML webpage designed with Bootstrap Studio and hosted via GitHub and Cloudflare Pages. The website also utilizes Cloudflare R2 storage for hosting and delivering Website assents. Additionally, there is a dedicated page for listing certifications from Microsoft and Google and various certifications in the Accessibility and Inclusion space, which were completed as part of my academic journey.
+Varun Manoj Kumar’s portfolio website highlights his educational achievements, professional certifications, and IT-related projects. It offers a clear and professional overview of his technical skills and academic background, making it a valuable resource for building professional connections, exploring career opportunities, and collaborating on IT-focused projects. As an online resume, it consolidates all key professional details in one easily accessible location, enabling potential employers, colleagues, and collaborators to quickly review his qualifications and accomplishments in a structured format. The website also serves as a showcase of Varun’s abilities, providing evidence of his technical expertise and dedication to continuous learning.
+
+The site is organized into key sections: a Home Page that summarizes the content, an Education section that lists Varun’s academic accomplishments, and a Certifications section featuring verified credentials from institutions like Microsoft and Google. The Projects section provides detailed descriptions and demo links, allowing visitors to explore his work. Finally, the contact section makes it easy to get in touch via email or a contact form.
+
+Built using HTML, CSS, JavaScript, and Bootstrap, the website is modern, responsive, and easy to navigate. It is hosted on Cloudflare Pages ensuring reliability and fast performance.
+
 ## Features
 -	**Responsive Design**: Ensures compatibility across various devices.
 -	**Dark Mode Support**: Allow users to toggle between Light and Dark Mode for improved viewing experience.
