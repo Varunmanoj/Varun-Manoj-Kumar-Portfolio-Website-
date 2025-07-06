@@ -1,6 +1,15 @@
 @font-face {
 	font-family: 'Poppins';
-	src: url(../../assets/fonts/Poppins-6cf407131e586ed1c255485ff861f94f.woff2?h=e9113278e79dc6fd3180a640056458c8) format('woff2');
+	src: url(../../assets/fonts/Poppins-e65948c9465a725e264090ba56d02157.woff2?h=5ff1280c95a32238712615280ccd817f) format('woff2');
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+	unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url(../../assets/fonts/Poppins-6cf407131e586ed1c255485ff861f94f.woff2?h=5ff1280c95a32238712615280ccd817f) format('woff2');
 	font-weight: 400;
 	font-style: italic;
 	font-display: swap;
@@ -9,7 +18,7 @@
 
 @font-face {
 	font-family: 'Poppins';
-	src: url(../../assets/fonts/Poppins-cb1fe7fa69d94ffd6c1a3d41ba953959.woff2?h=e9113278e79dc6fd3180a640056458c8) format('woff2');
+	src: url(../../assets/fonts/Poppins-cb1fe7fa69d94ffd6c1a3d41ba953959.woff2?h=5ff1280c95a32238712615280ccd817f) format('woff2');
 	font-weight: 400;
 	font-style: italic;
 	font-display: swap;
@@ -18,7 +27,16 @@
 
 @font-face {
 	font-family: 'Poppins';
-	src: url(../../assets/fonts/Poppins-4cea605b2baace598c548d2fda974e23.woff2?h=e9113278e79dc6fd3180a640056458c8) format('woff2');
+	src: url(../../assets/fonts/Poppins-5659c11d0716a251ec335eb73f397157.woff2?h=5ff1280c95a32238712615280ccd817f) format('woff2');
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+	unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url(../../assets/fonts/Poppins-4cea605b2baace598c548d2fda974e23.woff2?h=5ff1280c95a32238712615280ccd817f) format('woff2');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -27,7 +45,7 @@
 
 @font-face {
 	font-family: 'Poppins';
-	src: url(../../assets/fonts/Poppins-808a7fadde2803377986dfbbb8700b6a.woff2?h=e9113278e79dc6fd3180a640056458c8) format('woff2');
+	src: url(../../assets/fonts/Poppins-808a7fadde2803377986dfbbb8700b6a.woff2?h=5ff1280c95a32238712615280ccd817f) format('woff2');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -36,7 +54,16 @@
 
 @font-face {
 	font-family: 'Poppins';
-	src: url(../../assets/fonts/Poppins-470b8bce189746aab64e7d08e861b1d8.woff2?h=e9113278e79dc6fd3180a640056458c8) format('woff2');
+	src: url(../../assets/fonts/Poppins-4765d67d098965530691e3940325370b.woff2?h=5ff1280c95a32238712615280ccd817f) format('woff2');
+	font-weight: 500;
+	font-style: normal;
+	font-display: swap;
+	unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url(../../assets/fonts/Poppins-470b8bce189746aab64e7d08e861b1d8.woff2?h=5ff1280c95a32238712615280ccd817f) format('woff2');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
@@ -45,7 +72,7 @@
 
 @font-face {
 	font-family: 'Poppins';
-	src: url(../../assets/fonts/Poppins-3d4504fc5fcc830d255669197b50b940.woff2?h=e9113278e79dc6fd3180a640056458c8) format('woff2');
+	src: url(../../assets/fonts/Poppins-3d4504fc5fcc830d255669197b50b940.woff2?h=5ff1280c95a32238712615280ccd817f) format('woff2');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
@@ -54,7 +81,16 @@
 
 @font-face {
 	font-family: 'Poppins';
-	src: url(../../assets/fonts/Poppins-330eca8cf788da91ae041f7a4a706f5e.woff2?h=e9113278e79dc6fd3180a640056458c8) format('woff2');
+	src: url(../../assets/fonts/Poppins-ef1fc7254b096c554abdbefa6f7784cb.woff2?h=5ff1280c95a32238712615280ccd817f) format('woff2');
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+	unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url(../../assets/fonts/Poppins-330eca8cf788da91ae041f7a4a706f5e.woff2?h=5ff1280c95a32238712615280ccd817f) format('woff2');
 	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
@@ -63,7 +99,7 @@
 
 @font-face {
 	font-family: 'Poppins';
-	src: url(../../assets/fonts/Poppins-423c5903c9805abb8dbaa48fba202caa.woff2?h=e9113278e79dc6fd3180a640056458c8) format('woff2');
+	src: url(../../assets/fonts/Poppins-423c5903c9805abb8dbaa48fba202caa.woff2?h=5ff1280c95a32238712615280ccd817f) format('woff2');
 	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
@@ -72,7 +108,16 @@
 
 @font-face {
 	font-family: 'Poppins';
-	src: url(../../assets/fonts/Poppins-b57e21c9fab8a74acb6e61f5b9446872.woff2?h=e9113278e79dc6fd3180a640056458c8) format('woff2');
+	src: url(../../assets/fonts/Poppins-e342ddb446facfa34e914895b3d7b89c.woff2?h=5ff1280c95a32238712615280ccd817f) format('woff2');
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+	unicode-range: U+0900-097F, U+1CD0-1CF9, U+200C-200D, U+20A8, U+20B9, U+20F0, U+25CC, U+A830-A839, U+A8E0-A8FF, U+11B00-11B09;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url(../../assets/fonts/Poppins-b57e21c9fab8a74acb6e61f5b9446872.woff2?h=5ff1280c95a32238712615280ccd817f) format('woff2');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
@@ -81,7 +126,7 @@
 
 @font-face {
 	font-family: 'Poppins';
-	src: url(../../assets/fonts/Poppins-0a7b3a9e4bd70125b19dcb8851bf6227.woff2?h=e9113278e79dc6fd3180a640056458c8) format('woff2');
+	src: url(../../assets/fonts/Poppins-0a7b3a9e4bd70125b19dcb8851bf6227.woff2?h=5ff1280c95a32238712615280ccd817f) format('woff2');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
