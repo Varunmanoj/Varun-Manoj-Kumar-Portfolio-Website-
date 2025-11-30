@@ -161,6 +161,11 @@
   --bs-btn-disabled-border-color: #32d2a2;
 }
 
+a {
+  text-decoration: var(--bs-link-decoration);
+  text-decoration: var(--bs-link-decoration);
+}
+
 [data-bs-theme=dark] {
   --bs-primary: #592ae7;
   --bs-primary-rgb: 89,42,231;
