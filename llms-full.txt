@@ -1,0 +1,485 @@
+# Varun Manoj Kumar
+
+> Self Motivated visually challenged (low vision) with a passion for accessibility and innovation. With over 2 years experience at Deloitte USI, Currently working as an Associate Analyst in Workday Integrations and Reporting, certified in Workday Finance Integration and Prism Analytics . I enjoy learning new skills and applying them to create user experiences Inclusive for All with Technology.
+
+## Main
+
+### Varun Manoj Kumar
+
+Source: [https://varunmanojkumar.in/](https://varunmanojkumar.in/)
+
+# **Varun Manoj Kumar!**
+
+Self Motivated visually challenged (low vision) **MCA Graduate** with a passion for accessibility and innovation. With over 2 years experience at **Deloitte USI**, currently working as an **Associate Analyst** in Workday Integrations and Reporting, certified in Workday Finance Integration and Prism Analytics . I am enthusiastic about Learning new skills and applying them to create inclusive experiences through Technology
+
+* [ ](https://www.linkedin.com/in/varun-manoj-kumar/)
+* [ ](https://github.com/Varunmanoj)
+* [ ](https://www.instagram.com/varunmanojkumar7/)
+
+![Varun Manoj Kumar Logo ](assets/img/Varun%20Profesional%20photo.webp)
+
+## **Experience**
+
+![Deloitte Logo](assets/img/Deloitte%20Logo%20Black.webp) 
+
+### Deloitte Consulting
+
+Associate Analyst
+
+July 2023 - Present 
+
+Certified in **Workday Finance Integrations** after completing extensive training. 
+
+#### Methodist Le Bonheur Healthcare (MLH)
+
+Contributed to MLH's integration development and go-live activities by scheduling integrations and resolving technical tickets. Developed payroll integrations, conducted regression testing for critical updates, and collaborated on reporting and impact analysis. Enhanced skills through ongoing training and teamwork.
+
+#### KeHE Distributors (KEHE)
+
+Focused on resolving reporting challenges issues for KEHE. Delivered custom solutions for payment processing, built new reports, and optimized data management. Ensured seamless operations by addressing integration and reporting needs. 
+
+#### Avangrid.inc
+
+Contributed to a project with a leading American company that focuses on clean and sustainable energy solutions using electric, natural gas, and renewable sources. As a team member I have successfully resolved 800+ tickets till date and thereby contribute about 8% of the team’s daily workload. I have resolved data inconsistencies to mitigate billing/customer service issues in AMI Meters.
+
+![Aadi Infotech Logo](assets/img/Adi-infotech-.webp) 
+
+### Aadi Infotech
+
+Internship
+
+May 2022 - June 2022 
+
+[View Certificate](https://resources.portfolio.varunmanojkumar.in/Varun-Manoj-Kumar-Aadi-Infotech-internship-Certificate.pdf)
+
+#### India City Trivia
+
+Aadi Infotech is an AI based Cloud Technology Solutions Provider that provides services that help in Integrating a Business with the latest cloud services to automate the daily tasks and stay ahead of the rest. Explore cloud-based solutions that combine powerful infrastructure choices, a robust development platform and industry-leading services.  
+  
+I worked for Aadi Infotech for a short internship and explored AI based Voice Assistants like Alexa and developed an Alexa Skill Game ‘India City Trivia’
+
+![e-Stone Technology Logo](assets/img/Estone.webp) 
+
+### e-Stone Technology
+
+Internship
+
+April 2022 - June 2022 
+
+[View Certificate](https://resources.portfolio.varunmanojkumar.in/Varun-Manoj-E-Stone-Technology-certificate.pdf)
+
+#### Word Puzzle Game ‘WordZzle’
+
+e-Stone Information Technology is an IT Technology Solution Consultancy offering entire spectrum of IT solutions & services based in Mumbai and New York. The clientele include NEC, Tata Power, Tata Advanced Systems Limited, Netmagic, NTT Data, GST Network, National Project Implementation Unit (unit of Ministry of HRD), Cox & Kings etc.  
+  
+As part of my summer internship, I worked as an Android App Developer for this company and developed a Word Puzzle Game ‘WordZzle’
+
+![Microsoft Logo](assets/img/Microsoft-Logo--e1666769472451.webp) 
+
+### Future Ready Talent
+
+Internship
+
+October 2021 - Jan 2022 
+
+[View Certificate](https://resources.portfolio.varunmanojkumar.in/Varun%20Manoj%20Kumar%20Future%20Ready%20Talent%20Internship%20Certificate.pdf)
+
+#### Here 2 Help
+
+Future Ready Talent is a virtual internship platform with an opportunity to learn the in- demand azure cloud & security skills aligned to industry needs. The program aims at  
+  
+preparing learners work towards solving business challenges and creating innovative solutions using the power of Microsoft Azure & GitHub tools. This internship is learn- apply-implement based.   
+  
+As part of the Virtual Internship, I built an Al based ChatBot which provides answers for FAQs for a demo college website - '#Here2Help'
+
+## **Projects**
+
+![Battery % Viewer Low Vision Logo](assets/img/Battery%20Viewer%20-%20Low%20Vision.png) 
+
+# **Battery % Viewer- Low Vision**
+
+Developed my first Android App (Battery % Viewer) to display phone battery percentage and published on Google Play and Amazon App Store.  
+  
+Also built companion Desktop App both Mac and Windows
+
+[Learn More ](Projects/Battery-Percent-Viewer-Low-Vision.html) 
+
+![St. Xavier's College Canteen Logo ](assets/img/Canteen-Website.webp) 
+
+# **St. Xavier's College Canteen**
+
+Developed a Website and QR code for College Canteen Menu in order to help students with disability to read the menu currently displayed on boards
+
+[Learn More ](Projects/St-Xavier-College-Canteen.html) 
+
+![MinsArt Website Logo](assets/img/Minsart%20Website-Preview.webp) 
+
+# **MintsArt Creative & Colourful Hand-painted Decor For Your Home**
+
+Developed an eCommerce website that offers products in multiple categories using WordPress. Integrated with RazorPay Payment Gateway and Google Analytics.
+
+[Learn More ](Projects/Mintsart-E-Commerce-Website.html) 
+
+[View more ](Project.html)
+
+## **Education**
+
+![St. Xavier's College Logo](assets/img/St.%20Xavier%27s%20College%20Logo.webp) 
+
+### St Xavier's College
+
+BSc-IT
+
+July 2020 - May 2023 
+
+Undergraduate in Bachelors Degree in Information Technology
+
+* Received the **Best Performer Award** from HOD.
+* Built and Deployed Android App on Google and Amazon App Store.
+* Volunteered at **XRCVC** to convert Text Books to accessible Formats (EPUB)
+* Appointed as the Lead Maintaining Accessibility Standards of St. Xavier’s **Malhar 2021 website** (College Annual Festival)
+* Built an **E-Library Management System** for XRCVC to mange accessible Books offered by XRCVC to Students
+
+![Amrita Vishwa Vidyapeetham](assets/img/Amritha%20Ahead%20Online.svg) 
+
+### Amrita Vishwa Vidyapeetham
+
+MCA
+
+October 2023 - Oct 2025 
+
+Postgraduate Degree in Masters of Computer Applications
+
+* Built a Portfolio website to showcase my Projects and achievements.
+* Built a PWA utility tool to Effortlessly convert all 4US time zones to IST with accurate 12-hour results! and published to the **Google Play store and Microsoft Store**
+* Completed the **Meta Backend Developer Professional Certificate** on Coursera and developed a prototype of a Restaurant booking and Menu website using **Django Rest Framework**.
+
+## **Featured Award**
+
+### **Deloitte Consulting**
+
+![Deloitte Award Logo](assets/img/Deloitte%20Award%20Transparent.png) 
+
+#### **Applause Award**
+
+Received applause award from Deloitte USI for developing and contributing the US India Time Converter program , which helps streamline coordination with users across US and India and improves client satisfaction using a simple innovation
+
+[View Certificate](https://resources.portfolio.varunmanojkumar.in/Varun%20Applause%20Award%20redact.pdf) 
+
+![Deloitte Award Logo](assets/img/Deloitte%20Award%20Transparent.png) 
+
+#### **Spot Award**
+
+Received a Spot Award for the effort in building tools that can be reused across Workday projects.
+
+[View Certificate](https://resources.portfolio.varunmanojkumar.in/Varun%20Spot%20Award%20Redact.pdf) 
+
+![Deloitte Award Logo](assets/img/Deloitte%20Award%20Transparent.png) 
+
+#### **Applause Award**
+
+Received an Applause award for exceptional contributions in resolving critical project payroll settlement corrections and Successfully delivered high-quality solutions.
+
+[View Certificate](https://resources.portfolio.varunmanojkumar.in/MLH%20Applause%20Award%20Redact.pdf) 
+
+![Deloitte Award Logo](assets/img/Deloitte%20Award%20Transparent.png) 
+
+#### **Applause Award**
+
+Received an Applause award for the contribution made for the Client 
+
+[View Certificate](https://resources.portfolio.varunmanojkumar.in/Kehe%20Applause%20Award%20Redact.pdf) 
+
+### **St. Xavier's College**
+
+[![Best Performer award from HOD](assets/img/Best%20Performer%20Award%20St.%20Xaviers.webp)](assets/img/Best%20Performer%20Award%20St.%20Xaviers.webp) 
+
+**Best Performer Award in BSc-IT**
+
+[![Most Promising Student of XRCVC](assets/img/Most%20promising%20student%20of%20XRCVC%20By%20Lions%20Club.webp)](assets/img/Most%20promising%20student%20of%20XRCVC%20By%20Lions%20Club.webp) 
+
+**Most Promising Student of XRCVC**
+
+[View Certificate](https://resources.portfolio.varunmanojkumar.in/Varun%20Most%20promissing%20Student%20of%20XRCVC.pdf) 
+
+[![Lion's Club Bombay](assets/img/Lions%20Club%20badge.webp)](assets/img/Lions%20Club%20badge.webp) 
+
+**Lion's Club Bombay**
+
+## **Featured** 
+
+![BitMap 2002](assets/img/BITMAP-Logo.webp) 
+
+## BITMAP 2022
+
+### St. Xavier’s IT department College Magazine
+
+* All Inclusive: AI : Page 44
+* Malhar Accessibility : Pg 62
+[Read Full Article](Articles.html) 
+
+![Times of India Article](assets/img/TOI-Logo.webp) 
+
+## Visually impaired teen gets 95.8% | Mumbai News 
+
+### Times of India
+
+Visually impaired Varun Manoj Kumar, a student of Delhi Public School, Nerul, scored 95.
+
+[Read Full Article](https://timesofindia.indiatimes.com/city/mumbai/visually-impaired-teen-gets-95-8/articleshow/76948480.cms) 
+
+## **Certifications**
+
+[![MS900  badge](assets/img/microsoft-certified-fundamentals-badge.svg) **Microsoft 365 Fundamentals** ](https://learn.microsoft.com/api/credentials/share/en-us/ManojkumarVarun-9787/39FADA1EF62AA875?sharingId=9237F64C30A4E2BC)
+
+[![AI-900 Badge](assets/img/microsoft-certified-azure-ai-fundamentals.webp) **Microsoft Azure AI Fundamentals** ](https://learn.microsoft.com/api/credentials/share/en-us/ManojkumarVarun-9787/72CBD6C504A97C7E?sharingId=9237F64C30A4E2BC)
+
+[![DP-900  Badge](assets/img/microsoft-certified-azure-data-fundamentals.webp) **Microsoft Azure Data Fundamentals** ](https://learn.microsoft.com/api/credentials/share/en-us/ManojkumarVarun-9787/1D5EC1F256F09C84?sharingId=9237F64C30A4E2BC)
+
+[![AZ-900 Badge](assets/img/Microsoft%20Certified%20Azure%20Fundamentals.webp) **Microsoft Azure Fundamentals** ](https://learn.microsoft.com/api/credentials/share/en-us/ManojkumarVarun-9787/9C5F9F30C121DAD5?sharingId=9237F64C30A4E2BC)
+
+[View more ](Certificates.html "All Certificates")
+
+## Reach Out to me!
+
+WANT TO COLLABRATE ON A PROJECT OR JUST WANT TO SAY HI? MY INBOX IS OPEN FOR ALL
+
+### Phone
+
++91 [8369506195](tel:+918369506195)
+
+### Email
+
+[\[email protected\]](/cdn-cgi/l/email-protection#4b3d2a393e25262a252421797b7b790b2c262a222765282426)
+
+### Location
+
+Mumbai, Maharashtra, India 
+
+Name
+
+Email
+
+Message
+
+Send
+
+### Projects
+
+Source: [https://varunmanojkumar.in/Project.html](https://varunmanojkumar.in/Project.html)
+
+# All Projects
+
+[![XRCVC E- Library Logo ](assets/img/Deloitte%20Travel%20Tracker.webp)](Projects/Corporate%20Travel%20Tracker.html) 
+
+[ Corporate Travel Tracker ](Projects/Corporate%20Travel%20Tracker.html) 
+
+A smart expense tracker that analyzes Uber, Ola, Rapido, and Cityflo receipts to track monthly spending against a corpor…
+
+[Read more](Projects/Corporate%20Travel%20Tracker.html) 
+
+[![XRCVC E- Library Logo ](assets/img/workday-Reporting-GenAI.webp)](Projects/Workday%20Reporting%20Assistant.html) 
+
+[ Workday Reporting Assistant ](Projects/Workday%20Reporting%20Assistant.html) 
+
+An AI-powered assistant designed to streamline your Workday reporting tasks. This Web App helps you navigate Workday's c…
+
+[Read more](Projects/Workday%20Reporting%20Assistant.html) 
+
+[![XRCVC E- Library Logo ](assets/img/US%20India%20Converter.jpg)](Projects/USI%20Time%20Converter.html) 
+
+[ US India Time Converter ](Projects/USI%20Time%20Converter.html) 
+
+Use this simple and efficient time zone converter to seamlessly convert time from CST, EST, or PST to Indian Standard Ti…
+
+[Read more](Projects/USI%20Time%20Converter.html) 
+
+[![XRCVC E- Library Logo ](assets/img/Deal%20Memo%20Dashboard.webp)](Projects/Deal%20Memo%20Dashboard.html) 
+
+[ Deal Memo Dashboard ](Projects/Deal%20Memo%20Dashboard.html) 
+
+Developed Deal Memo Dashboard using Microsoft Power Platform as part of Microsoft 365! Leveraging Power Automate and Sha…
+
+[Read more](Projects/Deal%20Memo%20Dashboard.html) 
+
+[![XRCVC E- Library Logo ](assets/img/XRCVC%20E%20Library%20%20Website%20Preview.webp)](Projects/XRCVC-E-Library.html) 
+
+[ XRCVC E Library Management System ](Projects/XRCVC-E-Library.html) 
+
+Streamline library management with the XRCVC e-Library System! Designed for accessibility, this digital library lets use…
+
+[Read more](Projects/XRCVC-E-Library.html) 
+
+[![XRCVC E- Library Logo ](assets/img/AMI%20Excpetion%20Tool%20Project%20Feature%20Graphic.webp)](Projects/Avangrid-AMI-Exception-Tool.html) 
+
+[ Avangrid AMI Exception Tool ](Projects/Avangrid-AMI-Exception-Tool.html) 
+
+Avangrid AM Exception Tools is a website that offers a suite of utilities aimed at enhancing the efficiency of performin…
+
+[Read more](Projects/Avangrid-AMI-Exception-Tool.html) 
+
+[![XRCVC E- Library Logo ](assets/img/Vijay%20Minerals%20Website%20Preview.webp)](Projects/Vijay-Minerals.html) 
+
+[ Vijay Minerals -A Division of VJAY CORPORATIONS ](Projects/Vijay-Minerals.html) 
+
+Designed and developed a fully functional and user-friendly business website for Vijay Minerals (Vijay Corporations), a …
+
+[Read more](Projects/Vijay-Minerals.html) 
+
+[![XRCVC E- Library Logo ](assets/img/Thumbnail.webp)](Projects/HearMe-%20Listen-to-enjoy-%20Listen-to-Learn.html) 
+
+[ HearMe, Listen to enjoy, Listen to Learn ](Projects/HearMe-%20Listen-to-enjoy-%20Listen-to-Learn.html) 
+
+Discover HearMe: the audiobook app for everyone who loves storytelling! Perfect for relaxing and unleashing creativity, …
+
+[Read more](Projects/HearMe-%20Listen-to-enjoy-%20Listen-to-Learn.html) 
+
+[![XRCVC E- Library Logo ](assets/img/Minsart%20Website-Preview.webp)](Projects/Mintsart-E-Commerce-Website.html) 
+
+[ MintsArt - Creative & Colourful Hand-painted Decor For Your Home ](Projects/Mintsart-E-Commerce-Website.html) 
+
+MintsArt is a fully functional E-Commerce Website which is built upon the open-Source CMS Tool (WordPress). The website …
+
+[Read more](Projects/Mintsart-E-Commerce-Website.html) 
+
+[![XRCVC E- Library Logo ](assets/img/Canteen-Website.webp)](Projects/St-Xavier-College-Canteen.html) 
+
+[ St. Xavier's College Canteen menu ](Projects/St-Xavier-College-Canteen.html) 
+
+The St. Xavier’s College Canteen is a website which displays the information of the different menu items in the College …
+
+[Read more](Projects/St-Xavier-College-Canteen.html) 
+
+[![XRCVC E- Library Logo ](assets/img/Website-Image.webp)](Projects/3s-kart-E-Commerse-Website.html) 
+
+[ 3S Kart E-Commerce Website ](Projects/3s-kart-E-Commerse-Website.html) 
+
+3S Kart is a fully functional E-Commerce Website which is built upon the open Source CMS Tool (WordPress). The website d…
+
+[Read more](Projects/3s-kart-E-Commerse-Website.html) 
+
+[![XRCVC E- Library Logo ](assets/img/indiamapicon.webp)](Projects/India-City-Trivia.html) 
+
+[ India City Trivia Alexa Skill Game ](Projects/India-City-Trivia.html) 
+
+Test your knowledge of Indian city nicknames with the Alexa Skill \*India City Trivia\*! Enjoy fun questions, learn cool f…
+
+[Read more](Projects/India-City-Trivia.html) 
+
+[![XRCVC E- Library Logo ](assets/img/WordZzle.-Feature-Graphicpng.webp)](Projects/Wordzzel-Word-Guess-Game.html) 
+
+[ wordZzle Word Guess Game ](Projects/Wordzzel-Word-Guess-Game.html) 
+
+Love Wordle? Try WordZzle, the ultimate word puzzle game! Enjoy unlimited challenges with 4, 5, or 6-letter words. Perfe…
+
+[Read more](Projects/Wordzzel-Word-Guess-Game.html) 
+
+[![XRCVC E- Library Logo ](assets/img/Battery%20Viewer%20-%20Low%20Vision.png)](Projects/Battery-Percent-Viewer-Low-Vision.html) 
+
+[ Battery % Viewer Low Vision ](Projects/Battery-Percent-Viewer-Low-Vision.html) 
+
+People with visual impairments (Visually Impaired (VI) Community) usually find it difficult to read the battery level on…
+
+[Read more](Projects/Battery-Percent-Viewer-Low-Vision.html) 
+
+[![XRCVC E- Library Logo ](assets/img/Here2help-e1666331939491.webp)](Projects/Here2Help-AI-ChatBot.html) 
+
+[ AI Chat Bot - Here 2 Help ](Projects/Here2Help-AI-ChatBot.html) 
+
+"Explore ABC College effortlessly with AI Chatbot #Here2Help! Get instant answers to your questions about admissions, co…
+
+[Read more](Projects/Here2Help-AI-ChatBot.html)
+
+### Articles
+
+Source: [https://varunmanojkumar.in/Articles.html](https://varunmanojkumar.in/Articles.html)
+
+# All Articles
+
+### Featured in BITMAP 2022
+
+[![Malhar 2021 Website Logo](assets/img/Article-Cover.webp)](Articles/AI-All-Inclusive.html) 
+
+[ AI – All Inclusive! ](Articles/AI-All-Inclusive.html) 
+
+About Me I am Varun Manoj Kumar from SY BSC-IT. I am a VIP 😁! – Yes, a “Very Important Person” for my family and friend…
+
+[Read more](Articles/AI-All-Inclusive.html) 
+
+[![Malhar 2021 Website Logo](assets/img/Malhar-Website-preview.webp)](Articles/Malhar-Website-Accessibility.html) 
+
+[ Malhar Website Accessibility ](Articles/Malhar-Website-Accessibility.html) 
+
+Malhar ’21, our very own college festival, was held online last year for the first time. With it being held online, it w…
+
+[Read more](Articles/Malhar-Website-Accessibility.html) 
+
+[View BITMAP 2022 Magazine](https://resources.portfolio.varunmanojkumar.in/BITMAP22.pdf)
+
+### Certificates
+
+Source: [https://varunmanojkumar.in/Certificates.html](https://varunmanojkumar.in/Certificates.html)
+
+# **Certifications**
+
+## Microsoft Certifications
+
+[![MS900  badge](assets/img/microsoft-certified-fundamentals-badge.svg) **Microsoft 365 Fundamentals** ](https://learn.microsoft.com/api/credentials/share/en-us/ManojkumarVarun-9787/39FADA1EF62AA875?sharingId=9237F64C30A4E2BC)
+
+[![AI-900 Badge](assets/img/microsoft-certified-azure-ai-fundamentals.webp) **Microsoft Azure AI Fundamentals** ](https://learn.microsoft.com/api/credentials/share/en-us/ManojkumarVarun-9787/72CBD6C504A97C7E?sharingId=9237F64C30A4E2BC)
+
+[![DP-900  Badge](assets/img/microsoft-certified-azure-data-fundamentals.webp) **Microsoft Azure Data Fundamentals** ](https://learn.microsoft.com/api/credentials/share/en-us/ManojkumarVarun-9787/1D5EC1F256F09C84?sharingId=9237F64C30A4E2BC)
+
+[![AZ-900 Badge](assets/img/Microsoft%20Certified%20Azure%20Fundamentals.webp) **Microsoft Azure Fundamentals** ](https://learn.microsoft.com/api/credentials/share/en-us/ManojkumarVarun-9787/9C5F9F30C121DAD5?sharingId=9237F64C30A4E2BC)
+
+### Microsoft Applied Skills badge
+
+[![Microsoft Applied Skills Badge](assets/img/Microsoft%20Applied%20Skill%20Badge.svg) **Build a natural language processing solution with Azure AI Language** ](https://learn.microsoft.com/api/credentials/share/en-us/ManojkumarVarun-9787/4A8F50C681C22756?sharingId=9237F64C30A4E2BC)
+
+[![Microsoft Applied Skills Badge](assets/img/Microsoft%20Applied%20Skill%20Badge.svg) **Build an Azure AI Vision solution** ](https://learn.microsoft.com/api/credentials/share/en-us/ManojkumarVarun-9787/C38CC20776ECAEEB?sharingId=9237F64C30A4E2BC)
+
+[![Microsoft Applied Skills Badge](assets/img/Microsoft%20Applied%20Skill%20Badge.svg) **Create an intelligent document processing solution with Azure AI Document Intelligence** ](https://learn.microsoft.com/api/credentials/share/en-us/ManojkumarVarun-9787/4986F3924C7786C?sharingId=9237F64C30A4E2BC)
+
+## Google Cloud 
+
+[![Microsoft Applied Skills Badge](assets/img/Google%20Cloud%20Computing.webp) **Google Cloud Computing Foundations Certificate** ](https://www.credly.com/badges/e8b03709-5826-46c9-a881-672c02a71ab2/linked%5Fin%5Fprofile)
+
+[![Implement Load Balancing on Compute Engine Skill Badge](assets/img/Set%20Up%20an%20App%20Dev%20Environment%20on%20Google%20Cloud%20Skill%20Badge.webp) **Implement Load Balancing on Compute Engine Skill Badge** ](https://www.credly.com/badges/807a63cb-68ad-4f44-ab28-79d30f680865/public%5Furl)
+
+[![Set Up an App Dev Environment on Google Cloud Skill Badge](assets/img/Set%20Up%20an%20App%20Dev%20Environment%20on%20Google%20Cloud%20Skill%20Badge.webp) Set Up an App Dev Environment on Google Cloud Skill Badge ](https://www.credly.com/badges/72938140-864c-4612-b208-7116d421be43/public%5Furl)
+
+[![Build a Secure Google Cloud Network Skill Badge](assets/img/Build%20a%20Secure%20Google%20Cloud%20Network%20Skill%20Badge.webp) Build a Secure Google Cloud Network Skill Badge ](https://www.credly.com/badges/ab6c63f1-6fe4-4c86-93a0-26a5b0183305/public%5Furl)
+
+[![Set Up an App Dev Environment on Google Cloud Skill Badge](assets/img/Prepare%20Data%20for%20ML%20APIs%20on%20Google%20Cloud%20Skill%20Badge.webp) Prepare Data for ML APIs on Google Cloud Skill Badge ](https://www.credly.com/badges/8cfa2ab1-0da2-42e4-aa68-6f906338ca3f/public%5Furl)
+
+[![Inspect Rich Documents with Gemini Multimodality and Multimodal RAG Skill Badge](assets/img/Implement%20Load%20Balancing%20on%20Compute%20Engine%20Skill%20Badge.png) Inspect Rich Documents with Gemini Multimodality and Multimodal RAG Skill Badge ](https://www.credly.com/badges/26cf23ce-d26e-40fd-9103-6f9dc9d88428/public%5Furl)
+
+[![Integrate Vertex AI Search and Conversation into Voice and Chat Apps Skill Badge](assets/img/Integrate%20Vertex%20AI%20Search%20and%20Conversation%20into%20Voice%20and%20Chat%20Apps%20Skill%20Badge.webp) Integrate Vertex AI Search and Conversation into Voice and Chat Apps Skill Badge ](https://www.credly.com/badges/12ea6587-e978-4591-b154-013f68b2460d/public%5Furl)
+
+[![Text Prompt Engineering Techniques Skill Badge](assets/img/Text%20Prompt%20Engineering%20Techniques%20Skill%20Badge.webp) Text Prompt Engineering Techniques Skill Badge ](https://www.credly.com/badges/94337714-06cb-4ca7-9dc1-a4012b163b03/public%5Furl)
+
+[![Deploying Search and Chat Apps using Agent Builder](assets/img/Deploying%20Search%20and%20Chat%20Apps%20using%20Agent%20Builder.webp) Deploying Search and Chat Apps using Agent Builder ](https://www.credly.com/badges/0e59bb81-c330-4866-92e6-6fa3668d88bf/public%5Furl)
+
+## Workday
+
+[![Learn with Workday](assets/img/Learn%20with%20Workday.webp) **Learn with Workday** ](https://www.credly.com/badges/a48adcf7-a998-4db3-938e-8ad584c0bf63/public%5Furl)
+
+[![Implement Load Balancing on Compute Engine Skill Badge](assets/img/Workday%20Logo.svg) **Financial Integration Certification** ](https://resources.portfolio.varunmanojkumar.in/Workday%20Learning%20transcript.pdf)
+
+[![Set Up an App Dev Environment on Google Cloud Skill Badge](assets/img/Workday%20Logo.svg) Financial Essential Concepts Consulting Core ](https://resources.portfolio.varunmanojkumar.in/Financial%20Essential%20Concepts%20Consulting%20Core.pdf)
+
+## Accessibility
+
+[![Learn with Workday](assets/img/NVDA-Certification-Shop-Icon-1153x1536.jpg) **NVDA Certified Expert** ](https://certification.nvaccess.org/)[View Certificate](https://resources.portfolio.varunmanojkumar.in/NVDA%20Certified%20Expert.pdf)
+
+[![Implement Load Balancing on Compute Engine Skill Badge](assets/img/JAWS-2021-Certified.webp) **JAWS 2025 Certified** ](https://support.freedomscientific.com/Services/TrainingAndCertification/JAWSCertifiedIndividuals)[View Certificate](Certificates/JAWS%202025%20Certificate.html)
+
+[![Set Up an App Dev Environment on Google Cloud Skill Badge](assets/img/us_department_of_homeland_security_logo.jpeg) Section 508 ](https://training.section508testing.net/pluginfile.php/1/tool%5Fcertificate/issues/1715010944/5264250159VM.pdf)
+
+![Set Up an App Dev Environment on Google Cloud Skill Badge](assets/img/us_department_of_homeland_security_logo.jpeg) 
+
+# Authoring Accessible Documents Certification
+
+[Authoring Accessible Microsoft Excel Documents.pdf](https://resources.portfolio.varunmanojkumar.in/Section%20508%20%20Authoring%20Accessible%20Microsoft%20Excel%20Documents.pdf)[Authoring Accessible Microsoft Word Documents.pdf](https://resources.portfolio.varunmanojkumar.in/Section%20508%20%20Authoring%20Accessible%20Microsoft%20Word%20Documents.pdf)[Authoring Accessible Microsoft Power PointDocuments.pdf](https://resources.portfolio.varunmanojkumar.in/Section%20508%20Authoring%20Accessible%20Microsoft%20PowerPoint.pdf)[Authoring Accessible Microsoft PDF Documents.pdf](https://resources.portfolio.varunmanojkumar.in/Section%20508%20%20Authoring%20Accessible%20PDF%20Documents.pdf)
+
+
