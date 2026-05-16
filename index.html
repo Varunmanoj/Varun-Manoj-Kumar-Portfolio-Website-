@@ -68,7 +68,31 @@
                     element.setAttribute('aria-pressed', 'false');
                 });
 
+                const iconTheme = theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
+
                 for (const themeSwitcher of themeSwitchers) {
+
+                    const adaptIcon = !!themeSwitcher.dataset.bsAdaptIcon;
+
+                    if (adaptIcon) {
+                        const btnIcon = themeSwitcher.querySelector('[data-bss-adaptable]');
+
+                        try {
+                            const themeIcons = JSON.parse(themeSwitcher.dataset.bssIcons || "{}");
+                            const newIconMarkup = themeIcons[iconTheme];
+
+                            const template = document.createElement("template");
+                            template.innerHTML = newIconMarkup;
+
+                            const newIconFragment = template.content.cloneNode(true);
+
+                            if (newIconFragment?.children?.length) {
+                                newIconFragment.children[0].dataset.bssAdaptable = true;
+                            }
+
+                            btnIcon.replaceWith(newIconFragment);
+                        } catch (e) {}
+                    }
 
                     const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
 
@@ -112,7 +136,7 @@
     <link rel="stylesheet" href="assets/css/Sansita%20Swashed.css">
     <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/bss-overrides.css">
-    <link rel="stylesheet" href="assets/css/aos.min.css">
+    <link rel="stylesheet" href="assets/css/./embed/animation/aos.min.css">
     <link rel="stylesheet" href="assets/css/Article.css">
     <link rel="stylesheet" href="assets/css/Lightbox-Gallery-baguetteBox.min.css">
     <link rel="stylesheet" href="assets/css/Navbar-Centered-Brand-icons.css">
@@ -131,26 +155,24 @@
 </script>
 </head>
 
-<body>
-    <!-- Start: Skip Link --><a class="btn btn-primary btn-sm visually-hidden-focusable" role="button" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true" href="#main-content" rel="bookmark" accesskey="m">Skip to Main Content</a><!-- End: Skip Link -->
-    <header>
-        <!-- Start: Navbar Right Links -->
+<body><!-- Start: Skip Link --><a class="btn btn-primary btn-sm visually-hidden-focusable" role="button" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true" href="#main-content" rel="bookmark" accesskey="m">Skip to Main Content</a><!-- End: Skip Link -->
+    <header><!-- Start: Navbar Right Links -->
         <nav class="navbar navbar-expand-md bg-body py-3">
-            <div class="container"><a class="navbar-brand focus-ring d-flex align-items-center" href="/"><span class="fw-semibold logo-font">Varun Manoj Kumar</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><a class="navbar-brand focus-ring d-flex align-items-center" href="/"><span class="fw-semibold logo-font">Varun Manoj Kumar</span></a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-2">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link active focus-ring" href="Project.html">Projects</a></li>
                         <li class="nav-item"><a class="nav-link focus-ring" href="Articles.html">Articles</a></li>
                         <li class="nav-item"><a class="nav-link focus-ring" href="Certificates.html">Certificates</a></li>
-                        <li class="theme-switcher nav-item dropdown"><a class="dropdown-toggle nav-link focus-ring" aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
-                                    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                        <li class="theme-switcher nav-item dropdown"><a class="dropdown-toggle nav-link focus-ring" data-bs-toggle="dropdown" aria-expanded="false" href="#"><svg class="bi bi-sun-fill mb-1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"></path>
                                 </svg></a>
-                            <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill me-2 opacity-50">
-                                        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
-                                    </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill me-2 opacity-50">
-                                        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"></path>
-                                        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
-                                    </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half me-2 opacity-50">
+                            <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg class="bi bi-sun-fill me-2 opacity-50" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"></path>
+                                    </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg class="bi bi-moon-stars-fill me-2 opacity-50" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"></path>
+                                        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"></path>
+                                    </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg class="bi bi-circle-half me-2 opacity-50" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
                                         <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
                                     </svg>Auto</a></div>
                         </li>
@@ -159,42 +181,48 @@
             </div>
         </nav><!-- End: Navbar Right Links -->
     </header>
-    <main id="main-content" class="main-section">
-        <!-- Start: Hero -->
-        <section data-aos="fade" data-aos-duration="700" id="Hero" class="section">
-            <!-- Start: 1 Row 2 Columns -->
+    <main id="main-content" class="main-section"><!-- Start: Hero -->
+        <section data-aos="fade" data-aos-duration="700" id="Hero" class="section"><!-- Start: 1 Row 2 Columns -->
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 text-center">
                         <h1 class="text-center" id="Hearo-heading"><strong>Varun Manoj Kumar!</strong></h1>
-                        <p id="hero-paragraph">Self Motivated visually challenged (low vision) <strong>MCA Graduate </strong>with a passion for accessibility and innovation. With over 2 years experience at <strong>Deloitte USI</strong>, currently working as an <strong>Associate Analyst </strong>in Workday Integrations and Reporting, certified in Workday Finance Integration and Prism Analytics . I am enthusiastic about Learning new skills and applying them to create inclusive experiences through Technology</p><!-- Start: social Media -->
+                        <p id="hero-paragraph">Self Motivated visually challenged (low vision) <strong>MCA Graduate </strong>with a passion for accessibility and innovation. With over 2 years experience at <strong>Accenture</strong>, currently working as an <strong>Custom Software Engineer&nbsp;</strong>in Workday Integrations and Reporting, certified in <strong>Workday Finance Integration </strong>and <strong>Prism Analytics </strong>. I am enthusiastic about Learning new skills and applying them to create inclusive experiences through Technology</p><!-- Start: social Media -->
                         <ul class="list-inline">
-                            <li class="list-inline-item"><a class="focus-ring" href="https://www.linkedin.com/in/varun-manoj-kumar/" rel="external" target="_blank" aria-label="LinkedIn URL (opens in new tab)"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-linkedin border rounded-circle" style="color: var(--bs-blue);font-size: 31px;">
-                                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401m-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4"></path>
+                            <li class="list-inline-item"><a class="focus-ring" href="https://www.linkedin.com/in/varun-manoj-kumar/" rel="external" target="_blank" aria-label="LinkedIn URL (opens in new tab)"><svg class="bi bi-linkedin border rounded-circle" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" style="color: var(--bs-blue);font-size: 31px;">
+                                        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"></path>
                                     </svg></a></li>
-                            <li class="list-inline-item"><a class="focus-ring" href="https://github.com/Varunmanoj" target="_blank" rel="external" aria-label="GitHub URL (opens in new tab)"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-github border rounded-circle" style="color: var(--bs-dark);font-size: 31px;">
-                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8"></path>
+                            <li class="list-inline-item"><a class="focus-ring" href="https://github.com/Varunmanoj" target="_blank" rel="external" aria-label="GitHub URL (opens in new tab)"><svg class="bi bi-github border rounded-circle" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" style="color: var(--bs-dark);font-size: 31px;">
+                                        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"></path>
                                     </svg></a></li>
-                            <li class="list-inline-item"><a class="focus-ring" href="https://www.instagram.com/varunmanojkumar7/" target="_blank" rel="external" aria-label="Instagram URL (opens in new tab)"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram border rounded-circle" style="color: var(--bs-secondary);font-size: 31px;">
-                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
+                            <li class="list-inline-item"><a class="focus-ring" href="https://www.instagram.com/varunmanojkumar7/" target="_blank" rel="external" aria-label="Instagram URL (opens in new tab)"><svg class="bi bi-instagram border rounded-circle" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" style="color: var(--bs-secondary);font-size: 31px;">
+                                        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"></path>
                                     </svg></a></li>
                         </ul><!-- End: social Media -->
                     </div>
-                    <div class="col-md-6 d-md-flex justify-content-md-center align-items-md-center" style="text-align: right;"><img class="rounded-circle img-fluid d-none d-sm-none d-md-block" id="dp-logo" src="assets/img/Varun%20Profesional%20photo.webp" width="252" height="252" alt="Varun Manoj Kumar Logo "></div>
+                    <div class="col-md-6 d-md-flex justify-content-md-center align-items-md-center" style="text-align: right;"><img class="img-fluid rounded-circle d-none d-sm-none d-md-block" id="dp-logo" src="assets/img/Varun%20Profesional%20photo.webp" width="252" height="252" alt="Varun Manoj Kumar Logo "></div>
                 </div>
             </div><!-- End: 1 Row 2 Columns -->
-        </section><!-- End: Hero -->
-        <!-- Start: Experience -->
+        </section><!-- End: Hero --><!-- Start: Experience -->
         <section data-aos="fade-up" data-aos-duration="1450" data-aos-once="true" id="Experience" class="section-dark" role="region" aria-label="Experience">
             <div class="container">
                 <h2 class="text-uppercase fw-bold text-decoration-underline text-center section-title-dark"><i class="fas fa-network-wired" style="padding-right: 5px;padding-left: 5px;font-size: 29px;"></i><strong>Experience</strong></h2>
-                <div class="d-md-flex flex-md-row experience-section" id="Deloitte-Consulting">
-                    <!-- Start: row -->
-                    <div class="experience-lhs-dark"><img class="rounded-circle img-fluid" src="assets/img/Deloitte%20Logo%20Black.webp" alt="Deloitte Logo" width="99" height="56" loading="lazy">
+                <div class="d-md-flex flex-md-row experience-section" id="Deloitte-Consulting"><!-- Start: row -->
+                    <div class="experience-lhs-dark"><img class="img-fluid rounded-circle" src="assets/img/Accenture%20icon.png" alt="Deloitte Logo" width="99" height="56" loading="lazy">
+                        <h3 class="section-title-dark">Accenture</h3>
+                        <p class="lead section-para-dark" style="padding-bottom: 1rem;">Custom Software Engineer</p><span class="education-hilight">May 2026 - Present</span>
+                    </div><!-- End: row --><!-- Start: column -->
+                    <div>
+                        <p class="section-para-dark">Certified in <strong>Workday Finance Integrations&nbsp; and Prism&nbsp;Analytics</strong>. </p>
+                        <h4 class="section-title-dark company-title">Accenture Workday Project</h4>
+                        <p class="section-para-dark">Contributing to Accenture's Workday Integrations and Reporting Activities .</p>
+                    </div><!-- End: column -->
+                </div>
+                <div class="d-md-flex flex-md-row experience-section" id="Deloitte-Consulting-1"><!-- Start: row -->
+                    <div class="experience-lhs-dark"><img class="img-fluid rounded-circle" src="assets/img/Deloitte%20Logo%20Black.webp" alt="Deloitte Logo" width="99" height="56" loading="lazy">
                         <h3 class="section-title-dark">Deloitte Consulting</h3>
-                        <p class="lead section-para-dark" style="padding-bottom: 1rem;">Associate Analyst</p><span class="education-hilight">July 2023 - Present</span>
-                    </div><!-- End: row -->
-                    <!-- Start: column -->
+                        <p class="lead section-para-dark" style="padding-bottom: 1rem;">Associate Analyst</p><span class="education-hilight">July 2023 - April 2026</span>
+                    </div><!-- End: row --><!-- Start: column -->
                     <div>
                         <p class="section-para-dark">Certified in <strong>Workday Finance Integrations&nbsp; and Prism&nbsp;Analytics</strong>. </p>
                         <h4 class="section-title-dark company-title">Methodist Le Bonheur Healthcare&nbsp;(MLH)</h4>
@@ -239,11 +267,10 @@
                     </div>
                 </div>
             </div>
-        </section><!-- End: Experience -->
-        <!-- Start: Projects -->
+        </section><!-- End: Experience --><!-- Start: Projects -->
         <section data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" id="Project" class="section" role="region" aria-label="Featured Projects">
             <div class="container d-flex flex-column section">
-                <h2 class="text-uppercase fw-bold text-decoration-underline text-center section-title"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-briefcase-fill" style="padding-right: 5px;padding-left: 5px;font-size: 36px;">
+                <h2 class="text-uppercase fw-bold text-decoration-underline text-center section-title"><svg class="bi bi-briefcase-fill" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" style="padding-right: 5px;padding-left: 5px;font-size: 36px;">
                         <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5"></path>
                         <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z"></path>
                     </svg><strong>Projects</strong></h2>
@@ -251,33 +278,31 @@
             <div class="container d-md-flex flex-md-row">
                 <div id="project1" class="project-card" style="height: 465.9px;"><img class="img-fluid align-items-center pb-0" src="assets/img/Battery%20Viewer%20-%20Low%20Vision.png" width="244" height="119" alt="Battery % Viewer Low Vision Logo" loading="lazy" style="text-align: center;">
                     <h1 class="fs-2 focus-ring project-card-title"><strong>Battery % Viewer- Low Vision</strong></h1>
-                    <p>Developed my first Android App (Battery % Viewer) to display phone battery percentage and published on Google Play and Amazon App Store.<br><br>Also built companion Desktop App both Mac and Windows</p><a class="btn btn-primary flex-column align-items-center" role="button" href="Projects/Battery-Percent-Viewer-Low-Vision.html" aria-label="View battery % Viewer Low Vision Project">Learn More<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right button-icon" style="font-size: 20px;">
+                    <p>Developed my first Android App (Battery % Viewer) to display phone battery percentage and published on Google Play and Amazon App Store.<br><br>Also built companion Desktop App both Mac and Windows</p><a class="btn btn-primary flex-column align-items-center" role="button" href="Projects/Battery-Percent-Viewer-Low-Vision.html" aria-label="View battery % Viewer Low Vision Project">Learn More<svg class="bi bi-arrow-right button-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" style="font-size: 20px;">
                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
                         </svg></a>
                 </div>
                 <div id="project2" class="project-card"><img class="img-fluid pb-0" src="assets/img/Canteen-Website.webp" width="244" height="83" alt="St. Xavier's College Canteen Logo " loading="lazy">
                     <h1 class="fs-2 focus-ring project-card-title"><strong>St. Xavier's College Canteen</strong></h1>
                     <p>Developed a Website and QR code for College Canteen Menu in order to help students with disability to read the menu currently displayed on boards</p>
-                    <p></p><a class="btn btn-primary flex-column align-items-center" role="button" href="Projects/St-Xavier-College-Canteen.html" aria-label="View St. Xavier's College Canteen Menu Project">Learn More<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right button-icon" style="font-size: 20px;">
+                    <p></p><a class="btn btn-primary flex-column align-items-center" role="button" href="Projects/St-Xavier-College-Canteen.html" aria-label="View St. Xavier's College Canteen Menu Project">Learn More<svg class="bi bi-arrow-right button-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" style="font-size: 20px;">
                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
                         </svg></a>
                 </div>
                 <div id="prroject3" class="project-card"><img class="img-fluid pb-0" src="assets/img/Minsart%20Website-Preview.webp" width="244" height="119" alt="MinsArt Website Logo" loading="lazy">
                     <h1 class="fs-2 focus-ring project-card-title"><strong>MintsArt Creative &amp; Colourful Hand-painted Decor For Your Home</strong></h1>
-                    <p>Developed an eCommerce website that offers products in multiple categories using WordPress. Integrated with RazorPay Payment Gateway and Google Analytics.</p><a class="btn btn-primary flex-column align-items-center" role="button" href="Projects/Mintsart-E-Commerce-Website.html" aria-label="View MintsArt E-Commerce Website">Learn More<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right button-icon" style="font-size: 20px;">
+                    <p>Developed an eCommerce website that offers products in multiple categories using WordPress. Integrated with RazorPay Payment Gateway and Google Analytics.</p><a class="btn btn-primary flex-column align-items-center" role="button" href="Projects/Mintsart-E-Commerce-Website.html" aria-label="View MintsArt E-Commerce Website">Learn More<svg class="bi bi-arrow-right button-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" style="font-size: 20px;">
                             <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
                         </svg></a>
                 </div>
             </div><!-- End: Project Section -->
-            <div class="container focus-ring d-flex flex-column align-items-center learn-more-container" data-bs-toggle="tooltip" data-bss-tooltip="" title="View All Projects"><a class="btn btn-primary focus-ring" role="button" id="All-Projects" href="Project.html" aria-label="View All Projects">View more<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right button-icon">
+            <div class="container focus-ring d-flex flex-column align-items-center learn-more-container" data-bs-toggle="tooltip" data-bss-tooltip="" title="View All Projects"><a class="btn btn-primary focus-ring" role="button" id="All-Projects" href="Project.html" aria-label="View All Projects">View more<svg class="bi bi-arrow-right button-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
                     </svg></a></div>
-        </section><!-- End: Projects -->
-        <!-- Start: Education -->
+        </section><!-- End: Projects --><!-- Start: Education -->
         <section data-aos="fade" data-aos-duration="1200" data-aos-once="true" id="education" class="section" role="region" aria-label="Education">
             <h2 class="text-uppercase fw-bold text-decoration-underline text-center section-title"><i class="fas fa-book-open" style="padding-right: 5px;padding-left: 5px;font-size: 29px;"></i><strong>Education</strong></h2>
-            <div class="container d-md-flex flex-md-row">
-                <!-- Start: St. Xavier's -->
+            <div class="container d-md-flex flex-md-row"><!-- Start: St. Xavier's -->
                 <div class="education-item"><img class="img-fluid" src="assets/img/St.%20Xavier%27s%20College%20Logo.webp" alt="St. Xavier's College Logo" loading="lazy" width="96" height="121">
                     <h3 class="project-card-title">St Xavier's College</h3>
                     <p class="degreecode">BSc-IT</p><span class="education-hilight">July 2020 - May 2023</span>
@@ -289,8 +314,7 @@
                         <li>Appointed as the Lead Maintaining Accessibility Standards of St. Xavier’s&nbsp;<strong>Malhar 2021 website </strong>(College Annual Festival)</li>
                         <li>Built an <strong>E-Library Management System </strong>for XRCVC to mange accessible Books&nbsp; offered by XRCVC to Students&nbsp;</li>
                     </ul>
-                </div><!-- End: St. Xavier's -->
-                <!-- Start: Amritha -->
+                </div><!-- End: St. Xavier's --><!-- Start: Amritha -->
                 <div class="education-item"><img class="img-fluid pt-0 mb-3" src="assets/img/Amritha%20Ahead%20Online.svg" alt="Amrita Vishwa Vidyapeetham" loading="lazy" width="209" height="32" style="margin-top: 1rem;margin-bottom: 1rem;">
                     <h3 class="project-card-title">Amrita Vishwa Vidyapeetham</h3>
                     <p class="degreecode">MCA</p><span class="education-hilight">October 2023 - Oct 2025</span>
@@ -302,8 +326,7 @@
                     </ul>
                 </div><!-- End: Amritha -->
             </div>
-        </section><!-- End: Education -->
-        <!-- Start: Featured Awards -->
+        </section><!-- End: Education --><!-- Start: Featured Awards -->
         <section class="py-4 py-xl-5 photo-gallery section-dark" data-aos="fade-down" data-aos-duration="1500" data-aos-once="true" id="Featured-Awards" role="region" aria-label="Featured Avards">
             <div class="container">
                 <h2 class="text-uppercase fw-bold text-decoration-underline text-center section-title-dark"><i class="fas fa-trophy" style="padding-right: 5px;padding-left: 5px;font-size: 36px;"></i><strong>Featured Award</strong></h2>
@@ -357,45 +380,39 @@
                     <p class="text-center section-para-dark">Visually impaired Varun Manoj Kumar, a student of Delhi Public School, Nerul, scored 95.</p><a class="btn btn-primary focus-ring" role="button" id="Read-TOI-Article" aria-label="Read Times of India Article" href="https://timesofindia.indiatimes.com/city/mumbai/visually-impaired-teen-gets-95-8/articleshow/76948480.cms" target="_blank">Read Full Article</a>
                 </div>
             </div>
-        </section><!-- End: Featured Awards -->
-        <!-- Start: Certifications -->
+        </section><!-- End: Featured Awards --><!-- Start: Certifications -->
         <section data-aos="zoom-in-up" data-aos-duration="1500" data-aos-once="true" id="Certifications" class="section" role="region" aria-label="Certificates">
             <div class="container">
                 <h2 class="text-uppercase fw-bold text-decoration-underline text-center section-title"><i class="fas fa-award" style="padding-right: 5px;padding-left: 5px;font-size: 36px;"></i><strong>Certifications</strong></h2>
             </div>
             <div class="container d-flex flex-column align-items-center flex-md-row">
                 <div class="row row-cols-md-2 row-cols-lg-4">
-                    <div class="col">
-                        <!-- Start: MS-900 -->
+                    <div class="col"><!-- Start: MS-900 -->
                         <div class="d-flex flex-column flex-sm-column project-card" id="MS-900"><a class="focus-ring" target="_blank" rel="external" href="https://learn.microsoft.com/api/credentials/share/en-us/ManojkumarVarun-9787/39FADA1EF62AA875?sharingId=9237F64C30A4E2BC"><img class="img-fluid" src="assets/img/microsoft-certified-fundamentals-badge.svg" width="116" height="116" alt="MS900  badge" loading="lazy">
                                 <h1 class="fs-2 focus-ring project-card-title"><strong>Microsoft 365 Fundamentals</strong></h1>
                             </a></div><!-- End: MS-900 -->
                     </div>
-                    <div class="col">
-                        <!-- Start: AI-900 -->
+                    <div class="col"><!-- Start: AI-900 -->
                         <div class="d-flex flex-column flex-sm-column project-card" id="GCP"><a class="focus-ring" target="_blank" rel="external" href="https://www.credly.com/badges/e8b03709-5826-46c9-a881-672c02a71ab2/linked_in_profile"><img class="img-fluid" src="assets/img/Google%20Cloud%20Computing.webp" width="116" height="116" alt="Google Cloud Computing Logo" loading="lazy">
                                 <h1 class="fs-2 focus-ring project-card-title"><strong>Google Cloud Computing Foundations Certificate</strong></h1>
                             </a></div><!-- End: AI-900 -->
                     </div>
-                    <div class="col">
-                        <!-- Start: DP-900 -->
+                    <div class="col"><!-- Start: DP-900 -->
                         <div class="d-flex flex-column flex-sm-column project-card" id="DP-900"><a class="focus-ring" href="https://www.credly.com/badges/a702b7f3-41bb-4a46-aa7d-62391274ee6e/public_url" target="_blank" rel="external"><img class="img-fluid" src="assets/img/Workday%20Logo.svg" width="116" height="116" alt="Workday Logo" loading="lazy">
                                 <h1 class="fs-2 focus-ring project-card-title"><strong>Workday Pro Prism Analytics Services Certification</strong></h1>
                             </a></div><!-- End: DP-900 -->
                     </div>
-                    <div class="col">
-                        <!-- Start: Az-900 -->
+                    <div class="col"><!-- Start: Az-900 -->
                         <div class="d-flex flex-column flex-sm-column project-card" id="Az-900"><a class="focus-ring" href="https://varunmanojkumar.in/Certificates/JAWS%202025%20Certificate" target="_blank" rel="external"><img class="img-fluid" src="assets/img/JAWS-2021-Certified.webp" width="116" height="116" alt="JAWS Certified Logo" loading="lazy">
                                 <h1 class="fs-2 focus-ring project-card-title"><strong>JAWS 2025 Certified</strong></h1>
                             </a></div><!-- End: Az-900 -->
                     </div>
                 </div>
             </div>
-            <div class="container focus-ring d-flex flex-column align-items-center learn-more-container"><a class="btn btn-primary focus-ring" role="button" data-bs-toggle="tooltip" data-bss-tooltip="" id="All-Projects-1" href="Certificates.html" title="All Certificates" aria-label="View All Certificates">View more<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-right button-icon">
+            <div class="container focus-ring d-flex flex-column align-items-center learn-more-container"><a class="btn btn-primary focus-ring" role="button" data-bs-toggle="tooltip" data-bss-tooltip="" id="All-Projects-1" href="Certificates.html" title="All Certificates" aria-label="View All Certificates">View more<svg class="bi bi-arrow-right button-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
                         <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"></path>
                     </svg></a></div>
-        </section><!-- End: Certifications -->
-        <!-- Start: Contact Details -->
+        </section><!-- End: Certifications --><!-- Start: Contact Details -->
         <section class="position-relative py-4 py-xl-5" data-aos="fade" data-aos-duration="1500" data-aos-once="true" role="region" aria-label="Contact US">
             <div class="container position-relative">
                 <div class="row mb-5">
@@ -408,8 +425,8 @@
                     <div class="col-md-6 col-lg-4 col-xl-4">
                         <div class="d-flex h-100 flex-column justify-content-center align-items-start">
                             <div class="d-flex align-items-center p-3">
-                                <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-telephone">
-                                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"></path>
+                                <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon"><svg class="bi bi-telephone" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"></path>
                                     </svg></div>
                                 <div class="px-2">
                                     <h3 class="mb-0 contact-heading">Phone</h3>
@@ -417,7 +434,7 @@
                                 </div>
                             </div>
                             <div class="d-flex align-items-center p-3">
-                                <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-envelope">
+                                <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon"><svg class="bi bi-envelope" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
                                         <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"></path>
                                     </svg></div>
                                 <div class="px-2">
@@ -426,8 +443,8 @@
                                 </div>
                             </div>
                             <div class="d-flex align-items-center p-3">
-                                <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-pin">
-                                        <path d="M4.146.146A.5.5 0 0 1 4.5 0h7a.5.5 0 0 1 .5.5c0 .68-.342 1.174-.646 1.479-.126.125-.25.224-.354.298v4.431l.078.048c.203.127.476.314.751.555C12.36 7.775 13 8.527 13 9.5a.5.5 0 0 1-.5.5h-4v4.5c0 .276-.224 1.5-.5 1.5s-.5-1.224-.5-1.5V10h-4a.5.5 0 0 1-.5-.5c0-.973.64-1.725 1.17-2.189A5.921 5.921 0 0 1 5 6.708V2.277a2.77 2.77 0 0 1-.354-.298C4.342 1.674 4 1.179 4 .5a.5.5 0 0 1 .146-.354zm1.58 1.408-.002-.001.002.001m-.002-.001.002.001A.5.5 0 0 1 6 2v5a.5.5 0 0 1-.276.447h-.002l-.012.007-.054.03a4.922 4.922 0 0 0-.827.58c-.318.278-.585.596-.725.936h7.792c-.14-.34-.407-.658-.725-.936a4.915 4.915 0 0 0-.881-.61l-.012-.006h-.002A.5.5 0 0 1 10 7V2a.5.5 0 0 1 .295-.458 1.775 1.775 0 0 0 .351-.271c.08-.08.155-.17.214-.271H5.14c.06.1.133.191.214.271a1.78 1.78 0 0 0 .37.282"></path>
+                                <div class="bs-icon-md bs-icon-rounded bs-icon-primary d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon"><svg class="bi bi-pin" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M4.146.146A.5.5 0 0 1 4.5 0h7a.5.5 0 0 1 .5.5c0 .68-.342 1.174-.646 1.479-.126.125-.25.224-.354.298v4.431l.078.048c.203.127.476.314.751.555C12.36 7.775 13 8.527 13 9.5a.5.5 0 0 1-.5.5h-4v4.5c0 .276-.224 1.5-.5 1.5s-.5-1.224-.5-1.5V10h-4a.5.5 0 0 1-.5-.5c0-.973.64-1.725 1.17-2.189A6 6 0 0 1 5 6.708V2.277a3 3 0 0 1-.354-.298C4.342 1.674 4 1.179 4 .5a.5.5 0 0 1 .146-.354m1.58 1.408-.002-.001zm-.002-.001.002.001A.5.5 0 0 1 6 2v5a.5.5 0 0 1-.276.447h-.002l-.012.007-.054.03a5 5 0 0 0-.827.58c-.318.278-.585.596-.725.936h7.792c-.14-.34-.407-.658-.725-.936a5 5 0 0 0-.881-.61l-.012-.006h-.002A.5.5 0 0 1 10 7V2a.5.5 0 0 1 .295-.458 1.8 1.8 0 0 0 .351-.271c.08-.08.155-.17.214-.271H5.14q.091.15.214.271a1.8 1.8 0 0 0 .37.282"></path>
                                     </svg></div>
                                 <div class="px-2">
                                     <h3 class="mb-0 contact-heading">Location</h3>
@@ -438,10 +455,8 @@
                     </div>
                     <div class="col-md-6 col-lg-5 col-xl-4">
                         <div>
-                            <form class="p-3 p-xl-4" data-bss-recipient="a5ef6fc3e6e0bfb49636b3868fcfee53">
-                                <!-- Start: Success Example -->
-                                <div class="mb-3"><label class="form-label input-label" id="name-label" for="name-1">Name</label><input class="form-control" type="text" id="name-1" name="name" placeholder="Name" required="" minlength="3"></div><!-- End: Success Example -->
-                                <!-- Start: Error Example -->
+                            <form class="p-3 p-xl-4" data-bss-recipient="a5ef6fc3e6e0bfb49636b3868fcfee53"><!-- Start: Success Example -->
+                                <div class="mb-3"><label class="form-label input-label" id="name-label" for="name-1">Name</label><input class="form-control" type="text" id="name-1" name="name" placeholder="Name" required="" minlength="3"></div><!-- End: Success Example --><!-- Start: Error Example -->
                                 <div class="mb-3"><label class="form-label input-label" id="email-label" for="email-1">Email</label><input class="form-control" type="email" id="email-1" name="email" placeholder="Email" required=""></div><!-- End: Error Example -->
                                 <div class="mb-3"><label class="form-label input-label" id="mesage-label" for="message-1">Message</label><textarea class="form-control" id="message-1" name="message" rows="6" placeholder="Message" required="" minlength="3" maxlength="500"></textarea></div>
                                 <div><button class="btn btn-primary focus-ring w-100 d-block" data-bs-toggle="tooltip" data-bss-tooltip="" type="submit" title="Submit form">Send </button></div>
@@ -454,13 +469,13 @@
     </main><!-- Start: Footer Dark -->
     <footer class="text-center bg-dark">
         <div class="container text-white py-4 py-lg-5">
-            <p class="text-muted mb-0">Copyright © 2024 | Varun Manoj Kumar</p>
+            <p class="text-muted mb-0">Copyright © 2026| Varun Manoj Kumar</p>
         </div>
     </footer><!-- End: Footer Dark -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/aos.min.js"></script>
-    <script src="assets/js/smart-forms.min.js"></script>
+    <script src="assets/js/./embed/animation/aos.min.js"></script>
+    <script src="assets/js/./embed/js/smart-forms.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/Able%20Player/script/vts.js"></script>
     <script src="assets/js/Able%20Player/script/webvtt.js"></script>

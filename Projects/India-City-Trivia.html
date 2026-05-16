@@ -61,7 +61,31 @@
                     element.setAttribute('aria-pressed', 'false');
                 });
 
+                const iconTheme = theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme;
+
                 for (const themeSwitcher of themeSwitchers) {
+
+                    const adaptIcon = !!themeSwitcher.dataset.bsAdaptIcon;
+
+                    if (adaptIcon) {
+                        const btnIcon = themeSwitcher.querySelector('[data-bss-adaptable]');
+
+                        try {
+                            const themeIcons = JSON.parse(themeSwitcher.dataset.bssIcons || "{}");
+                            const newIconMarkup = themeIcons[iconTheme];
+
+                            const template = document.createElement("template");
+                            template.innerHTML = newIconMarkup;
+
+                            const newIconFragment = template.content.cloneNode(true);
+
+                            if (newIconFragment?.children?.length) {
+                                newIconFragment.children[0].dataset.bssAdaptable = true;
+                            }
+
+                            btnIcon.replaceWith(newIconFragment);
+                        } catch (e) {}
+                    }
 
                     const btnToActivate = themeSwitcher.querySelector('[data-bs-theme-value="' + theme + '"]');
 
@@ -104,7 +128,7 @@
     <link rel="stylesheet" href="../assets/css/Poppins.css">
     <link rel="stylesheet" href="../assets/css/Sansita%20Swashed.css">
     <link rel="stylesheet" href="../assets/css/bss-overrides.css">
-    <link rel="stylesheet" href="../assets/css/aos.min.css">
+    <link rel="stylesheet" href="../assets/css/./embed/animation/aos.min.css">
     <link rel="stylesheet" href="../assets/css/Article.css">
     <link rel="stylesheet" href="../assets/css/Lightbox-Gallery-baguetteBox.min.css">
     <link rel="stylesheet" href="../assets/css/Navbar-Centered-Brand-icons.css">
@@ -123,26 +147,24 @@
 </script>
 </head>
 
-<body>
-    <!-- Start: Skip Link --><a class="btn btn-primary btn-sm visually-hidden-focusable" role="button" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true" href="#main-content" rel="bookmark" accesskey="m">Skip to Main Content</a><!-- End: Skip Link -->
-    <header>
-        <!-- Start: Navbar Right Links -->
+<body><!-- Start: Skip Link --><a class="btn btn-primary btn-sm visually-hidden-focusable" role="button" data-aos="fade-down" data-aos-duration="1000" data-aos-once="true" href="#main-content" rel="bookmark" accesskey="m">Skip to Main Content</a><!-- End: Skip Link -->
+    <header><!-- Start: Navbar Right Links -->
         <nav class="navbar navbar-expand-md bg-body py-3">
-            <div class="container"><a class="navbar-brand focus-ring d-flex align-items-center" href="/"><span class="fw-semibold logo-font">Varun Manoj Kumar</span></a><button data-bs-toggle="collapse" class="navbar-toggler" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><a class="navbar-brand focus-ring d-flex align-items-center" href="/"><span class="fw-semibold logo-font">Varun Manoj Kumar</span></a><button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navcol-2"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navcol-2">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link active focus-ring" href="Project.html">Projects</a></li>
                         <li class="nav-item"><a class="nav-link focus-ring" href="Articles.html">Articles</a></li>
                         <li class="nav-item"><a class="nav-link focus-ring" href="Certificates.html">Certificates</a></li>
-                        <li class="theme-switcher nav-item dropdown"><a class="dropdown-toggle nav-link focus-ring" aria-expanded="false" data-bs-toggle="dropdown" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill mb-1">
-                                    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
+                        <li class="theme-switcher nav-item dropdown"><a class="dropdown-toggle nav-link focus-ring" data-bs-toggle="dropdown" aria-expanded="false" href="#"><svg class="bi bi-sun-fill mb-1" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                    <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"></path>
                                 </svg></a>
-                            <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-sun-fill me-2 opacity-50">
-                                        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"></path>
-                                    </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-moon-stars-fill me-2 opacity-50">
-                                        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"></path>
-                                        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"></path>
-                                    </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-circle-half me-2 opacity-50">
+                            <div class="dropdown-menu"><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="light"><svg class="bi bi-sun-fill me-2 opacity-50" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"></path>
+                                    </svg>Light</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="dark"><svg class="bi bi-moon-stars-fill me-2 opacity-50" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278"></path>
+                                        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z"></path>
+                                    </svg>Dark</a><a class="dropdown-item d-flex align-items-center" href="#" data-bs-theme-value="auto"><svg class="bi bi-circle-half me-2 opacity-50" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
                                         <path d="M8 15A7 7 0 1 0 8 1zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16"></path>
                                     </svg>Auto</a></div>
                         </li>
@@ -152,14 +174,11 @@
         </nav><!-- End: Navbar Right Links -->
     </header>
     <main id="main-content" class="main-section">
-        <article data-aos="fade" data-aos-duration="1500" class="article-section">
-            <!-- Start: Back Navigation -->
-            <div class="container section"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-arrow-left button-icon" style="font-size: 28px;">
+        <article data-aos="fade" data-aos-duration="1500" class="article-section"><!-- Start: Back Navigation -->
+            <div class="container section"><svg class="bi bi-arrow-left button-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" style="font-size: 28px;">
                     <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8"></path>
-                </svg><a class="focus-ring" data-bs-toggle="tooltip" data-bss-tooltip="" href="../Project.html" title="All Projects">Back</a></div><!-- End: Back Navigation -->
-            <!-- Start: Project -->
-            <div class="container">
-                <!-- Start: Description -->
+                </svg><a class="focus-ring" data-bs-toggle="tooltip" data-bss-tooltip="" href="../Project.html" title="All Projects">Back</a></div><!-- End: Back Navigation --><!-- Start: Project -->
+            <div class="container"><!-- Start: Description -->
                 <section class="d-flex flex-column align-items-center"><img class="img-fluid" alt="India City Trivia alexa Skill game" width="528" height="258" src="../assets/img/indiamapicon.webp">
                     <h1 class="text-center section-title">India City Trivia Alexa Skill Game</h1><!-- Start: Disclaimer -->
                     <section class="section section-info"><img src="../assets/img/Adi-infotech-.webp" width="186" alt="Microsoft Logo">
@@ -175,18 +194,16 @@
                 </section><!-- End: Description -->
                 <section class="section">
                     <h2 class="text-center section-title">Project Links</h2>
-                    <div class="text-center d-flex flex-column align-items-center"><a class="focus-ring d-flex flex-row" href="https://www.amazon.in/Varun-Manoj-kumar-India-Trivia/dp/B0B2RKJMQ9/ref=sr_1_1?crid=1IVBC8BEP24YV&amp;keywords=India+City+Trivia&amp;qid=1666343855&amp;s=mobile-apps&amp;sprefix=india+city+trivi%2Cmobile-apps%2C278&amp;sr=1-1" target="_blank" rel="external"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-link-45deg fs-2 text-success button-icon">
-                                <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"></path>
+                    <div class="text-center d-flex flex-column align-items-center"><a class="focus-ring d-flex flex-row" href="https://www.amazon.in/Varun-Manoj-kumar-India-Trivia/dp/B0B2RKJMQ9/ref=sr_1_1?crid=1IVBC8BEP24YV&amp;keywords=India+City+Trivia&amp;qid=1666343855&amp;s=mobile-apps&amp;sprefix=india+city+trivi%2Cmobile-apps%2C278&amp;sr=1-1" target="_blank" rel="external"><svg class="bi bi-link-45deg fs-2 text-success button-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16">
+                                <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"></path>
                                 <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"></path>
                             </svg>
                             <p class="fs-3">Project Link</p>
                         </a></div>
                 </section>
-            </div><!-- End: Project -->
-            <!-- Start: Article Navigation -->
-            <div class="container">
-                <!-- Start: All Projects -->
-                <div class="text-center section"><a class="btn btn-primary" role="button" id="all-projects" href="../Project.html"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-briefcase button-icon" style="font-size: 29px;">
+            </div><!-- End: Project --><!-- Start: Article Navigation -->
+            <div class="container"><!-- Start: All Projects -->
+                <div class="text-center section"><a class="btn btn-primary" role="button" id="all-projects" href="../Project.html"><svg class="bi bi-briefcase button-icon" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" style="font-size: 29px;">
                             <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5m1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0M1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5"></path>
                         </svg>View All Projects</a></div><!-- End: All Projects -->
             </div><!-- End: Article Navigation -->
@@ -194,12 +211,12 @@
     </main><!-- Start: Footer Dark -->
     <footer class="text-center bg-dark">
         <div class="container text-white py-4 py-lg-5">
-            <p class="text-muted mb-0">Copyright © 2024 | Varun Manoj Kumar</p>
+            <p class="text-muted mb-0">Copyright © 2026| Varun Manoj Kumar</p>
         </div>
     </footer><!-- End: Footer Dark -->
     <script src="../assets/js/jquery.min.js"></script>
     <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../assets/js/aos.min.js"></script>
+    <script src="../assets/js/./embed/animation/aos.min.js"></script>
     <script src="../assets/js/bs-init.js"></script>
     <script src="../assets/js/Able%20Player/script/vts.js"></script>
     <script src="../assets/js/Able%20Player/script/webvtt.js"></script>
